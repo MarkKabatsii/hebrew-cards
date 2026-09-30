@@ -1,0 +1,492 @@
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --text-2: #6e6e73;
+  --text-nav: #424245;
+  --fill: #e8e8ed;
+  --line: #d2d2d7;
+  --accent: #0071e3;
+  --danger: #c4271c;
+
+  --font-ui: 'Onest', system-ui, sans-serif;
+  --font-he: 'Frank Ruhl Libre', serif;
+
+  --shadow-card: 0 2px 6px #0000000d, 0 24px 48px #0000001a;
+  --shadow-panel: 0 2px 6px #0000000d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 0;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Меню */
+.nav {
+  height: 52px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffffcc;
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.logo-mark {
+  font-family: var(--font-he);
+  font-size: 22px;
+  color: var(--accent);
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+}
+.nav-links a {
+  color: var(--text-nav);
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: var(--text);
+}
+.nav-links a[aria-current='page'] {
+  color: var(--text);
+  font-weight: 600;
+}
+.nav-spacer {
+  width: 44px;
+}
+
+/* Сторінка */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 40px 48px 64px;
+}
+.hero {
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.hero p {
+  margin: 10px 0 0;
+  font-size: 19px;
+  color: var(--text-2);
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Колоди */
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.chip {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 22px;
+  background: var(--fill);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+}
+.chip[aria-pressed='true'] {
+  background: var(--text);
+  color: #fff;
+}
+
+/* Прогрес */
+.progress {
+  width: min(640px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.progress-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--line);
+}
+.progress-bar {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+/* Картка */
+.card {
+  width: min(640px, 100%);
+  height: 340px;
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0 24px;
+  text-align: center;
+}
+.card-he {
+  font-family: var(--font-he);
+  font-weight: 700;
+  font-size: clamp(64px, 20vw, 120px);
+  line-height: 1.1;
+}
+.card-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.card-translit {
+  font-size: 22px;
+  color: var(--text-2);
+  letter-spacing: 0.02em;
+}
+.card-meaning {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.card-hint {
+  font-size: 15px;
+  color: var(--text-2);
+}
+.card.is-hidden .card-answer {
+  display: none;
+}
+.card:not(.is-hidden) .card-hint {
+  display: none;
+}
+
+/* Кнопки */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 40px;
+  border-radius: 26px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-secondary {
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 22px;
+  background: var(--fill);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+}
+.btn-text {
+  background: none;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px;
+}
+.ratings {
+  display: flex;
+  gap: 12px;
+}
+.rating {
+  width: 148px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--fill);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.rating-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+.rating-hint {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+/* Порожня колода */
+.empty {
+  width: min(640px, 100%);
+  padding: 48px 24px;
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow-panel);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.empty h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.empty p {
+  margin: 0 0 12px;
+  font-size: 17px;
+  color: var(--text-2);
+}
+
+/* Сторінка «Додати слова» */
+.panel {
+  width: min(640px, 100%);
+  padding: 32px;
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow-panel);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.panel h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.field input {
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: var(--fill);
+  font: inherit;
+  font-size: 17px;
+  color: var(--text);
+}
+.field .input-he {
+  font-family: var(--font-he);
+  font-size: 28px;
+  font-weight: 500;
+}
+.panel .btn-primary {
+  align-self: flex-start;
+}
+.msg {
+  margin: 0;
+  min-height: 1.4em;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.msg.is-error {
+  color: var(--danger);
+}
+.muted {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+.word-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.word-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--fill);
+}
+.word-he {
+  font-family: var(--font-he);
+  font-weight: 700;
+  font-size: 28px;
+  min-width: 96px;
+}
+.word-text {
+  flex-grow: 1;
+  font-size: 15px;
+}
+.code {
+  width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--fill);
+  font:
+    13px/1.5 ui-monospace,
+    Menlo,
+    Consolas,
+    monospace;
+  color: var(--text);
+  resize: vertical;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+code {
+  font-size: 0.9em;
+  background: var(--fill);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}
+
+/* Вхід і список слів */
+.logo-mark.big {
+  font-size: 64px;
+  margin-bottom: 8px;
+}
+.word-list {
+  max-height: 360px;
+  overflow-y: auto;
+}
+#signout {
+  width: auto;
+}
+.stack {
+  width: 100%;
+}
+
+/* Телефони та вузькі екрани */
+@media (max-width: 720px) {
+  .nav {
+    padding: 0 16px;
+  }
+  .nav-links {
+    gap: 16px;
+  }
+  .nav-links a[href='#'] {
+    display: none;
+  }
+  .nav-spacer {
+    display: none;
+  }
+  .main {
+    padding: 24px 16px 48px;
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 17px;
+  }
+  .stack {
+    gap: 20px;
+  }
+  .card {
+    height: auto;
+    min-height: 320px;
+    padding: 32px 16px;
+  }
+  .card-translit {
+    font-size: 18px;
+  }
+  .card-meaning {
+    font-size: 28px;
+  }
+  #reveal {
+    width: 100%;
+    max-width: 640px;
+  }
+  .ratings {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 640px;
+  }
+  .rating {
+    width: 100%;
+    height: 56px;
+  }
+  .panel {
+    padding: 20px;
+  }
+  .panel .btn-primary {
+    align-self: stretch;
+  }
+  .word-row {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .word-he {
+    min-width: 72px;
+  }
+}

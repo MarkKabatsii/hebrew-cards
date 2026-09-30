@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вхід — Іврит</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <header class="hero">
+        <div class="logo-mark big" lang="he">א</div>
+        <h1>Вхід</h1>
+        <p>Ваші слова зберігаються в акаунті.</p>
+      </header>
+      <form class="panel" id="form" novalidate>
+        <label class="field"
+          ><span>Email</span>
+          <input
+            id="email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+        /></label>
+        <label class="field"
+          ><span>Пароль</span>
+          <input
+            id="password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="Щонайменше 6 символів"
+        /></label>
+        <div class="row">
+          <button class="btn-primary" type="submit">Увійти</button>
+          <button class="btn-text" id="signup" type="button">
+            Створити акаунт
+          </button>
+        </div>
+        <p class="msg" id="msg" role="status"></p>
+      </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="store.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
