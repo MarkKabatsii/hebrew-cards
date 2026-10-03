@@ -1,2554 +1,2914 @@
-{
-  "categories": [
-    {
-      "name": "basic_vocabulary",
-      "title": "Загальновживані слова",
-      "subcategories": [
-        {
-          "name": "pronouns",
-          "title": "Займенники",
-          "words": [
-            {
-              "id": 1,
-              "hebrew": "אני",
-              "transliteration": "ані",
-              "translation": "я"
-            },
-            {
-              "id": 2,
-              "hebrew": "אתה",
-              "transliteration": "ата",
-              "translation": "ти (чол.)"
-            },
-            {
-              "id": 3,
-              "hebrew": "את",
-              "transliteration": "ат",
-              "translation": "ти (жін.)"
-            },
-            {
-              "id": 4,
-              "hebrew": "הוא",
-              "transliteration": "гу",
-              "translation": "він"
-            },
-            {
-              "id": 5,
-              "hebrew": "היא",
-              "transliteration": "гі",
-              "translation": "вона"
-            },
-            {
-              "id": 6,
-              "hebrew": "אנחנו",
-              "transliteration": "анахну",
-              "translation": "ми"
-            },
-            {
-              "id": 7,
-              "hebrew": "אתם",
-              "transliteration": "атем",
-              "translation": "ви (чол.)"
-            },
-            {
-              "id": 8,
-              "hebrew": "אתן",
-              "transliteration": "атен",
-              "translation": "ви (жін.)"
-            },
-            {
-              "id": 9,
-              "hebrew": "הם",
-              "transliteration": "гем",
-              "translation": "вони (чол.)"
-            },
-            {
-              "id": 10,
-              "hebrew": "הן",
-              "transliteration": "ген",
-              "translation": "вони (жін.)"
-            },
-            {
-              "id": 11,
-              "hebrew": "זה",
-              "transliteration": "зе",
-              "translation": "це (чол.)"
-            },
-            {
-              "id": 12,
-              "hebrew": "זאת",
-              "transliteration": "зот",
-              "translation": "це (жін.)"
-            },
-            {
-              "id": 13,
-              "hebrew": "אלה",
-              "transliteration": "еле",
-              "translation": "ці"
-            }
-          ]
-        },
-        {
-          "name": "verbs",
-          "title": "Дієслова",
-          "words": [
-            {
-              "id": 14,
-              "hebrew": "להיות",
-              "transliteration": "лігйот",
-              "translation": "бути"
-            },
-            {
-              "id": 15,
-              "hebrew": "לעשות",
-              "transliteration": "лаасот",
-              "translation": "робити"
-            },
-            {
-              "id": 16,
-              "hebrew": "לרוצות",
-              "transliteration": "лірцоц",
-              "translation": "хотіти"
-            },
-            {
-              "id": 17,
-              "hebrew": "לדעת",
-              "transliteration": "ладаат",
-              "translation": "знати"
-            },
-            {
-              "id": 18,
-              "hebrew": "להבין",
-              "transliteration": "легавін",
-              "translation": "розуміти"
-            },
-            {
-              "id": 19,
-              "hebrew": "להגיד",
-              "transliteration": "легагід",
-              "translation": "казати / говорити"
-            },
-            {
-              "id": 20,
-              "hebrew": "לראות",
-              "transliteration": "лірвот",
-              "translation": "бачити"
-            },
-            {
-              "id": 21,
-              "hebrew": "לשמוע",
-              "transliteration": "лішмоа",
-              "translation": "чути"
-            },
-            {
-              "id": 22,
-              "hebrew": "ללכת",
-              "transliteration": "лалехет",
-              "translation": "йти"
-            },
-            {
-              "id": 23,
-              "hebrew": "לבוא",
-              "transliteration": "лаво",
-              "translation": "приходити"
-            },
-            {
-              "id": 24,
-              "hebrew": "לעבוד",
-              "transliteration": "лаавод",
-              "translation": "працювати"
-            },
-            {
-              "id": 25,
-              "hebrew": "לאכול",
-              "transliteration": "леохоль",
-              "translation": "їсти"
-            },
-            {
-              "id": 26,
-              "hebrew": "לשתות",
-              "transliteration": "лішто",
-              "translation": "пити"
-            },
-            {
-              "id": 27,
-              "hebrew": "לקנות",
-              "transliteration": "лікнот",
-              "translation": "купувати"
-            },
-            {
-              "id": 28,
-              "hebrew": "למכור",
-              "transliteration": "лімкор",
-              "translation": "продавати"
-            },
-            {
-              "id": 29,
-              "hebrew": "לקרוא",
-              "transliteration": "лікро",
-              "translation": "читати / кликати"
-            },
-            {
-              "id": 30,
-              "hebrew": "לכתוב",
-              "transliteration": "ліхтов",
-              "translation": "писати"
-            },
-            {
-              "id": 31,
-              "hebrew": "ללמוד",
-              "transliteration": "лільмод",
-              "translation": "вчитися"
-            },
-            {
-              "id": 32,
-              "hebrew": "לשחק",
-              "transliteration": "лешахек",
-              "translation": "грати"
-            },
-            {
-              "id": 33,
-              "hebrew": "לחשוב",
-              "transliteration": "лахшов",
-              "translation": "думати"
-            },
-            {
-              "id": 34,
-              "hebrew": "לפתוח",
-              "transliteration": "ліфтоах",
-              "translation": "відкривати"
-            },
-            {
-              "id": 35,
-              "hebrew": "לסגור",
-              "transliteration": "лісгор",
-              "translation": "закривати"
-            },
-            {
-              "id": 36,
-              "hebrew": "לתת",
-              "transliteration": "латет",
-              "translation": "давати"
-            },
-            {
-              "id": 37,
-              "hebrew": "לקחת",
-              "transliteration": "лакахат",
-              "translation": "брати"
-            },
-            {
-              "id": 38,
-              "hebrew": "להביא",
-              "transliteration": "легаві",
-              "translation": "приносити"
-            },
-            {
-              "id": 39,
-              "hebrew": "לקבל",
-              "transliteration": "лекабель",
-              "translation": "отримувати"
-            },
-            {
-              "id": 40,
-              "hebrew": "לאהוב",
-              "transliteration": "леогев",
-              "translation": "любити"
-            },
-            {
-              "id": 41,
-              "hebrew": "לשנוא",
-              "transliteration": "лішноа",
-              "translation": "ненавидіти"
-            },
-            {
-              "id": 42,
-              "hebrew": "לגור",
-              "transliteration": "лагар",
-              "translation": "мешкати"
-            },
-            {
-              "id": 43,
-              "hebrew": "לנוח",
-              "transliteration": "лануах",
-              "translation": "відпочивати"
-            },
-            {
-              "id": 44,
-              "hebrew": "לרוץ",
-              "transliteration": "ларуц",
-              "translation": "бігти"
-            },
-            {
-              "id": 45,
-              "hebrew": "לישון",
-              "transliteration": "лішон",
-              "translation": "спати"
-            },
-            {
-              "id": 46,
-              "hebrew": "לקום",
-              "transliteration": "лакум",
-              "translation": "вставати"
-            },
-            {
-              "id": 47,
-              "hebrew": "לעזור",
-              "transliteration": "лаазор",
-              "translation": "допомагати"
-            },
-            {
-              "id": 48,
-              "hebrew": "לנסות",
-              "transliteration": "ленасот",
-              "translation": "намагатися"
-            },
-            {
-              "id": 49,
-              "hebrew": "לשנות",
-              "transliteration": "лешанот",
-              "translation": "змінювати"
-            },
-            {
-              "id": 50,
-              "hebrew": "לשכוח",
-              "transliteration": "лішхоах",
-              "translation": "забувати"
-            },
-            {
-              "id": 51,
-              "hebrew": "לזכור",
-              "transliteration": "лізкор",
-              "translation": "пам'ятати"
-            },
-            {
-              "id": 52,
-              "hebrew": "למצוא",
-              "transliteration": "лімцо",
-              "translation": "знаходити"
-            },
-            {
-              "id": 53,
-              "hebrew": "לאבד",
-              "transliteration": "леабед",
-              "translation": "втрачати"
-            }
-          ]
-        },
-        {
-          "name": "nouns",
-          "title": "Іменники",
-          "words": [
-            {
-              "id": 54,
-              "hebrew": "בית",
-              "transliteration": "байт",
-              "translation": "будинок"
-            },
-            {
-              "id": 55,
-              "hebrew": "דירה",
-              "transliteration": "діра",
-              "translation": "квартира"
-            },
-            {
-              "id": 56,
-              "hebrew": "חדר",
-              "transliteration": "хедер",
-              "translation": "кімната"
-            },
-            {
-              "id": 57,
-              "hebrew": "מטבח",
-              "transliteration": "мітбах",
-              "translation": "кухня"
-            },
-            {
-              "id": 58,
-              "hebrew": "שירותים",
-              "transliteration": "шеррутім",
-              "translation": "туалет"
-            },
-            {
-              "id": 59,
-              "hebrew": "דלת",
-              "transliteration": "делет",
-              "translation": "двері"
-            },
-            {
-              "id": 60,
-              "hebrew": "חלון",
-              "transliteration": "халон",
-              "translation": "вікно"
-            },
-            {
-              "id": 61,
-              "hebrew": "שולחן",
-              "transliteration": "шульхан",
-              "translation": "стіл"
-            },
-            {
-              "id": 62,
-              "hebrew": "כיסא",
-              "transliteration": "кісе",
-              "translation": "стілець"
-            },
-            {
-              "id": 63,
-              "hebrew": "מיטה",
-              "transliteration": "міта",
-              "translation": "ліжко"
-            },
-            {
-              "id": 64,
-              "hebrew": "מים",
-              "transliteration": "маїм",
-              "translation": "вода"
-            },
-            {
-              "id": 65,
-              "hebrew": "אוכל",
-              "transliteration": "охель",
-              "translation": "їжа"
-            },
-            {
-              "id": 66,
-              "hebrew": "לחם",
-              "transliteration": "лехем",
-              "translation": "хліб"
-            },
-            {
-              "id": 67,
-              "hebrew": "חלב",
-              "transliteration": "халав",
-              "translation": "молоко"
-            },
-            {
-              "id": 68,
-              "hebrew": "בשר",
-              "transliteration": "басар",
-              "translation": "м'ясо"
-            },
-            {
-              "id": 69,
-              "hebrew": "פרי",
-              "transliteration": "прі",
-              "translation": "фрукт"
-            },
-            {
-              "id": 70,
-              "hebrew": "ירק",
-              "transliteration": "єрек",
-              "translation": "овоч"
-            },
-            {
-              "id": 71,
-              "hebrew": "קפה",
-              "transliteration": "кафе",
-              "translation": "кава"
-            },
-            {
-              "id": 72,
-              "hebrew": "תה",
-              "transliteration": "те",
-              "translation": "чай"
-            },
-            {
-              "id": 73,
-              "hebrew": "יום",
-              "transliteration": "йом",
-              "translation": "день"
-            },
-            {
-              "id": 74,
-              "hebrew": "לילה",
-              "transliteration": "лайла",
-              "translation": "ніч"
-            },
-            {
-              "id": 75,
-              "hebrew": "בוקר",
-              "transliteration": "бокер",
-              "translation": "ранок"
-            },
-            {
-              "id": 76,
-              "hebrew": "ערב",
-              "transliteration": "ерев",
-              "translation": "вечір"
-            },
-            {
-              "id": 77,
-              "hebrew": "שבוע",
-              "transliteration": "шавуа",
-              "translation": "тиждень"
-            },
-            {
-              "id": 78,
-              "hebrew": "חודש",
-              "transliteration": "ходеш",
-              "translation": "місяць"
-            },
-            {
-              "id": 79,
-              "hebrew": "שנה",
-              "transliteration": "шана",
-              "translation": "рік"
-            },
-            {
-              "id": 80,
-              "hebrew": "זמן",
-              "transliteration": "зман",
-              "translation": "час"
-            },
-            {
-              "id": 81,
-              "hebrew": "שעה",
-              "transliteration": "шаа",
-              "translation": "година"
-            },
-            {
-              "id": 82,
-              "hebrew": "רגע",
-              "transliteration": "рега",
-              "translation": "момент"
-            },
-            {
-              "id": 83,
-              "hebrew": "איש",
-              "transliteration": "іш",
-              "translation": "чоловік"
-            },
-            {
-              "id": 84,
-              "hebrew": "אישה",
-              "transliteration": "іша",
-              "translation": "жінка"
-            },
-            {
-              "id": 85,
-              "hebrew": "ילד",
-              "transliteration": "єлед",
-              "translation": "дитина / хлопчик"
-            },
-            {
-              "id": 86,
-              "hebrew": "ילדה",
-              "transliteration": "яльда",
-              "translation": "дівчинка"
-            },
-            {
-              "id": 87,
-              "hebrew": "משפחה",
-              "transliteration": "мішпаха",
-              "translation": "сім'я"
-            },
-            {
-              "id": 88,
-              "hebrew": "אבא",
-              "transliteration": "аба",
-              "translation": "батько"
-            },
-            {
-              "id": 89,
-              "hebrew": "אימא",
-              "transliteration": "іма",
-              "translation": "мати"
-            },
-            {
-              "id": 90,
-              "hebrew": "בן",
-              "transliteration": "бен",
-              "translation": "син"
-            },
-            {
-              "id": 91,
-              "hebrew": "בת",
-              "transliteration": "бат",
-              "translation": "дочка"
-            },
-            {
-              "id": 92,
-              "hebrew": "חבר",
-              "transliteration": "хавер",
-              "translation": "друг"
-            },
-            {
-              "id": 93,
-              "hebrew": "אנשים",
-              "transliteration": "анашим",
-              "translation": "люди"
-            },
-            {
-              "id": 94,
-              "hebrew": "עבודה",
-              "transliteration": "авода",
-              "translation": "робота"
-            },
-            {
-              "id": 95,
-              "hebrew": "כסף",
-              "transliteration": "кесеф",
-              "translation": "гроші"
-            },
-            {
-              "id": 96,
-              "hebrew": "מחיר",
-              "transliteration": "мехір",
-              "translation": "ціна"
-            },
-            {
-              "id": 97,
-              "hebrew": "חנות",
-              "transliteration": "ханут",
-              "translation": "магазин"
-            },
-            {
-              "id": 98,
-              "hebrew": "שוק",
-              "transliteration": "шук",
-              "translation": "ринок"
-            },
-            {
-              "id": 99,
-              "hebrew": "עיר",
-              "transliteration": "ір",
-              "translation": "місто"
-            },
-            {
-              "id": 100,
-              "hebrew": "רחוב",
-              "transliteration": "рехов",
-              "translation": "вулиця"
-            },
-            {
-              "id": 101,
-              "hebrew": "דרך",
-              "transliteration": "дерех",
-              "translation": "шлях / дорога"
-            },
-            {
-              "id": 102,
-              "hebrew": "מכונית",
-              "transliteration": "мехоніт",
-              "translation": "автомобіль"
-            },
-            {
-              "id": 103,
-              "hebrew": "אוטובוס",
-              "transliteration": "отобус",
-              "translation": "автобус"
-            },
-            {
-              "id": 104,
-              "hebrew": "רכבת",
-              "transliteration": "ракевет",
-              "translation": "потяг"
-            },
-            {
-              "id": 105,
-              "hebrew": "מטוס",
-              "transliteration": "матос",
-              "translation": "літак"
-            },
-            {
-              "id": 106,
-              "hebrew": "שדה תעופה",
-              "transliteration": "сде теупа",
-              "translation": "аеропорт"
-            },
-            {
-              "id": 107,
-              "hebrew": "מלון",
-              "transliteration": "малон",
-              "translation": "готель"
-            },
-            {
-              "id": 108,
-              "hebrew": "ים",
-              "transliteration": "ям",
-              "translation": "море"
-            },
-            {
-              "id": 109,
-              "hebrew": "שמש",
-              "transliteration": "шемеш",
-              "translation": "сонце"
-            },
-            {
-              "id": 110,
-              "hebrew": "ירח",
-              "transliteration": "яреах",
-              "translation": "місяць (на небі)"
-            },
-            {
-              "id": 111,
-              "hebrew": "שמים",
-              "transliteration": "шамаїм",
-              "translation": "небо"
-            },
-            {
-              "id": 112,
-              "hebrew": "אוויר",
-              "transliteration": "авір",
-              "translation": "повітря"
-            },
-            {
-              "id": 113,
-              "hebrew": "רוח",
-              "transliteration": "руах",
-              "translation": "вітер"
-            },
-            {
-              "id": 114,
-              "hebrew": "גשם",
-              "transliteration": "гешем",
-              "translation": "дощ"
-            },
-            {
-              "id": 115,
-              "hebrew": "עולם",
-              "transliteration": "олам",
-              "translation": "світ"
-            },
-            {
-              "id": 116,
-              "hebrew": "ארץ",
-              "transliteration": "ерец",
-              "translation": "країна / земля"
-            },
-            {
-              "id": 117,
-              "hebrew": "מדינה",
-              "transliteration": "медіна",
-              "translation": "держава"
-            },
-            {
-              "id": 118,
-              "hebrew": "שפה",
-              "transliteration": "сафа",
-              "translation": "мова"
-            },
-            {
-              "id": 119,
-              "hebrew": "מילה",
-              "transliteration": "міла",
-              "translation": "слово"
-            },
-            {
-              "id": 120,
-              "hebrew": "ספר",
-              "transliteration": "сефер",
-              "translation": "книга"
-            },
-            {
-              "id": 121,
-              "hebrew": "עט",
-              "transliteration": "ет",
-              "translation": "ручка"
-            },
-            {
-              "id": 122,
-              "hebrew": "נייר",
-              "transliteration": "ніяр",
-              "translation": "папір"
-            },
-            {
-              "id": 123,
-              "hebrew": "טלפון",
-              "transliteration": "телефон",
-              "translation": "телефон"
-            },
-            {
-              "id": 124,
-              "hebrew": "מחשב",
-              "transliteration": "махшев",
-              "translation": "комп'ютер"
-            },
-            {
-              "id": 125,
-              "hebrew": "תמונה",
-              "transliteration": "тмуна",
-              "translation": "картина / фото"
-            },
-            {
-              "id": 126,
-              "hebrew": "מוזיקה",
-              "transliteration": "музіка",
-              "translation": "музика"
-            },
-            {
-              "id": 127,
-              "hebrew": "סרט",
-              "transliteration": "серет",
-              "translation": "фільм"
-            },
-            {
-              "id": 128,
-              "hebrew": "משחק",
-              "transliteration": "місхак",
-              "translation": "гра"
-            },
-            {
-              "id": 129,
-              "hebrew": "בריאות",
-              "transliteration": "бріут",
-              "translation": "здоров'я"
-            },
-            {
-              "id": 130,
-              "hebrew": "רופא",
-              "transliteration": "рофе",
-              "translation": "лікар"
-            },
-            {
-              "id": 131,
-              "hebrew": "בית חולים",
-              "transliteration": "бейт холім",
-              "translation": "лікарня"
-            },
-            {
-              "id": 132,
-              "hebrew": "תרופה",
-              "transliteration": "труфа",
-              "translation": "ліки"
-            },
-            {
-              "id": 133,
-              "hebrew": "חיים",
-              "transliteration": "хаїм",
-              "translation": "життя"
-            },
-            {
-              "id": 134,
-              "hebrew": "מוות",
-              "transliteration": "мавет",
-              "translation": "смерть"
-            },
-            {
-              "id": 135,
-              "hebrew": "שקר",
-              "transliteration": "шекер",
-              "translation": "брехня"
-            },
-            {
-              "id": 136,
-              "hebrew": "אמת",
-              "transliteration": "емет",
-              "translation": "правда"
-            },
-            {
-              "id": 137,
-              "hebrew": "בעיה",
-              "transliteration": "беая",
-              "translation": "проблема"
-            },
-            {
-              "id": 138,
-              "hebrew": "שאלה",
-              "transliteration": "шеала",
-              "translation": "запитання"
-            },
-            {
-              "id": 139,
-              "hebrew": "תשובה",
-              "transliteration": "тшува",
-              "translation": "відповідь"
-            },
-            {
-              "id": 140,
-              "hebrew": "רעיון",
-              "transliteration": "реайон",
-              "translation": "ідея"
-            },
-            {
-              "id": 141,
-              "hebrew": "סיבה",
-              "transliteration": "сіба",
-              "translation": "причина"
-            },
-            {
-              "id": 142,
-              "hebrew": "מקום",
-              "transliteration": "маком",
-              "translation": "місце"
-            },
-            {
-              "id": 143,
-              "hebrew": "צד",
-              "transliteration": "цад",
-              "translation": "бік / сторона"
-            },
-            {
-              "id": 144,
-              "hebrew": "חלק",
-              "transliteration": "хелек",
-              "translation": "частина"
-            },
-            {
-              "id": 145,
-              "hebrew": "סוף",
-              "transliteration": "соф",
-              "translation": "кінець"
-            },
-            {
-              "id": 146,
-              "hebrew": "התחלה",
-              "transliteration": "атхала",
-              "translation": "початок"
-            },
-            {
-              "id": 147,
-              "hebrew": "פנים",
-              "transliteration": "панім",
-              "translation": "обличчя / всередині"
-            },
-            {
-              "id": 148,
-              "hebrew": "חוץ",
-              "transliteration": "хуц",
-              "translation": "зовні"
-            },
-            {
-              "id": 149,
-              "hebrew": "לב",
-              "transliteration": "лев",
-              "translation": "серце"
-            },
-            {
-              "id": 150,
-              "hebrew": "ראש",
-              "transliteration": "рош",
-              "translation": "голова"
-            },
-            {
-              "id": 151,
-              "hebrew": "יד",
-              "transliteration": "яд",
-              "translation": "рука"
-            },
-            {
-              "id": 152,
-              "hebrew": "רגל",
-              "transliteration": "рагель",
-              "translation": "нога"
-            },
-            {
-              "id": 153,
-              "hebrew": "מפתח",
-              "transliteration": "маптеах",
-              "translation": "ключ"
-            }
-          ]
-        },
-        {
-          "name": "adjectives",
-          "title": "Прикметники",
-          "words": [
-            {
-              "id": 154,
-              "hebrew": "טוב",
-              "transliteration": "тов",
-              "translation": "добрий / хороший"
-            },
-            {
-              "id": 155,
-              "hebrew": "רע",
-              "transliteration": "ра",
-              "translation": "поганий"
-            },
-            {
-              "id": 156,
-              "hebrew": "גדול",
-              "transliteration": "гадоль",
-              "translation": "великий"
-            },
-            {
-              "id": 157,
-              "hebrew": "קטן",
-              "transliteration": "катан",
-              "translation": "малий"
-            },
-            {
-              "id": 158,
-              "hebrew": "חדש",
-              "transliteration": "хадаш",
-              "translation": "новий"
-            },
-            {
-              "id": 159,
-              "hebrew": "ישן",
-              "transliteration": "яшан",
-              "translation": "старий (про речі)"
-            },
-            {
-              "id": 160,
-              "hebrew": "זקן",
-              "transliteration": "закен",
-              "translation": "старий (про людину)"
-            },
-            {
-              "id": 161,
-              "hebrew": "צעיר",
-              "transliteration": "цаір",
-              "translation": "молодий"
-            },
-            {
-              "id": 162,
-              "hebrew": "יפה",
-              "transliteration": "яфе",
-              "translation": "гарний"
-            },
-            {
-              "id": 163,
-              "hebrew": "מכוער",
-              "transliteration": "мехоер",
-              "translation": "потворний"
-            },
-            {
-              "id": 164,
-              "hebrew": "חם",
-              "transliteration": "хам",
-              "translation": "теплий / гарячий"
-            },
-            {
-              "id": 165,
-              "hebrew": "קר",
-              "transliteration": "кар",
-              "translation": "холодний"
-            },
-            {
-              "id": 166,
-              "hebrew": "מהיר",
-              "transliteration": "магір",
-              "translation": "швидкий"
-            },
-            {
-              "id": 167,
-              "hebrew": "איטי",
-              "transliteration": "іті",
-              "translation": "повільний"
-            },
-            {
-              "id": 168,
-              "hebrew": "קל",
-              "transliteration": "каль",
-              "translation": "легкий"
-            },
-            {
-              "id": 169,
-              "hebrew": "קשה",
-              "transliteration": "каше",
-              "translation": "важкий / складний"
-            },
-            {
-              "id": 170,
-              "hebrew": "ארוך",
-              "transliteration": "арох",
-              "translation": "довгий"
-            },
-            {
-              "id": 171,
-              "hebrew": "קצר",
-              "transliteration": "кацар",
-              "translation": "короткий"
-            },
-            {
-              "id": 172,
-              "hebrew": "נכון",
-              "transliteration": "нахон",
-              "translation": "правильний"
-            },
-            {
-              "id": 173,
-              "hebrew": "שגוי",
-              "transliteration": "шагуй",
-              "translation": "неправильний"
-            },
-            {
-              "id": 174,
-              "hebrew": "חשוב",
-              "transliteration": "хашув",
-              "translation": "важливий"
-            },
-            {
-              "id": 175,
-              "hebrew": "מעניין",
-              "transliteration": "меан'єн",
-              "translation": "цікавий"
-            },
-            {
-              "id": 176,
-              "hebrew": "משעמם",
-              "transliteration": "мешае́м",
-              "translation": "нудний"
-            },
-            {
-              "id": 177,
-              "hebrew": "שמח",
-              "transliteration": "сама́х",
-              "translation": "щасливий / радісний"
-            },
-            {
-              "id": 178,
-              "hebrew": "עצוב",
-              "transliteration": "ацув",
-              "translation": "сумний"
-            },
-            {
-              "id": 179,
-              "hebrew": "עייף",
-              "transliteration": "аєф",
-              "translation": "втомлений"
-            },
-            {
-              "id": 180,
-              "hebrew": "רעב",
-              "transliteration": "раев",
-              "translation": "голодний"
-            },
-            {
-              "id": 181,
-              "hebrew": "צמא",
-              "transliteration": "цама",
-              "translation": "спраглий"
-            },
-            {
-              "id": 182,
-              "hebrew": "נקי",
-              "transliteration": "накі",
-              "translation": "чистий"
-            },
-            {
-              "id": 183,
-              "hebrew": "מלוכלך",
-              "transliteration": "мелохлех",
-              "translation": "брудний"
-            },
-            {
-              "id": 184,
-              "hebrew": "יקר",
-              "transliteration": "якар",
-              "translation": "дорогий"
-            },
-            {
-              "id": 185,
-              "hebrew": "זול",
-              "transliteration": "золь",
-              "translation": "дешевий"
-            },
-            {
-              "id": 186,
-              "hebrew": "פתוח",
-              "transliteration": "патуах",
-              "translation": "відкритий"
-            },
-            {
-              "id": 187,
-              "hebrew": "סגור",
-              "transliteration": "сагур",
-              "translation": "закритий"
-            },
-            {
-              "id": 188,
-              "hebrew": "מתוק",
-              "transliteration": "маток",
-              "translation": "солодкий"
-            },
-            {
-              "id": 189,
-              "hebrew": "מלוح",
-              "transliteration": "малюах",
-              "translation": "солоний"
-            },
-            {
-              "id": 190,
-              "hebrew": "מר",
-              "transliteration": "мар",
-              "translation": "гіркий"
-            },
-            {
-              "id": 191,
-              "hebrew": "שקט",
-              "transliteration": "шекет",
-              "translation": "тихий"
-            },
-            {
-              "id": 192,
-              "hebrew": "רועש",
-              "transliteration": "роеш",
-              "translation": "шумний"
-            },
-            {
-              "id": 193,
-              "hebrew": "בטוח",
-              "transliteration": "батуах",
-              "translation": "безпечний / певний"
-            },
-            {
-              "id": 194,
-              "hebrew": "מסוכן",
-              "transliteration": "месукан",
-              "translation": "небезпечний"
-            },
-            {
-              "id": 195,
-              "hebrew": "חופשי",
-              "transliteration": "хофші",
-              "translation": "вільний"
-            },
-            {
-              "id": 196,
-              "hebrew": "תפוס",
-              "transliteration": "тапус",
-              "translation": "зайнятий"
-            },
-            {
-              "id": 197,
-              "hebrew": "חכם",
-              "transliteration": "хахам",
-              "translation": "розумний"
-            },
-            {
-              "id": 198,
-              "hebrew": "טיפש",
-              "transliteration": "тіпеш",
-              "translation": "дурний"
-            },
-            {
-              "id": 199,
-              "hebrew": "בריא",
-              "transliteration": "барі",
-              "translation": "здоровий"
-            },
-            {
-              "id": 200,
-              "hebrew": "חולה",
-              "transliteration": "холе",
-              "translation": "хворий"
-            },
-            {
-              "id": 201,
-              "hebrew": "עשיר",
-              "transliteration": "ашір",
-              "translation": "багатий"
-            },
-            {
-              "id": 202,
-              "hebrew": "עני",
-              "transliteration": "ані",
-              "translation": "бідний"
-            },
-            {
-              "id": 203,
-              "hebrew": "ריק",
-              "transliteration": "рік",
-              "translation": "порожній"
-            }
-          ]
-        },
-        {
-          "name": "prepositions",
-          "title": "Прийменники",
-          "words": [
-            {
-              "id": 204,
-              "hebrew": "ב-",
-              "transliteration": "бе-",
-              "translation": "в / на"
-            },
-            {
-              "id": 205,
-              "hebrew": "ל-",
-              "transliteration": "ле-",
-              "translation": "до / для"
-            },
-            {
-              "id": 206,
-              "hebrew": "מ-",
-              "transliteration": "мі-",
-              "translation": "з / від"
-            },
-            {
-              "id": 207,
-              "hebrew": "עם",
-              "transliteration": "ім",
-              "translation": "з (кимось)"
-            },
-            {
-              "id": 208,
-              "hebrew": "בלי",
-              "transliteration": "блі",
-              "translation": "без"
-            },
-            {
-              "id": 209,
-              "hebrew": "על",
-              "transliteration": "аль",
-              "translation": "на / про"
-            },
-            {
-              "id": 210,
-              "hebrew": "תחת",
-              "transliteration": "тахат",
-              "translation": "під"
-            },
-            {
-              "id": 211,
-              "hebrew": "לפני",
-              "transliteration": "ліфней",
-              "translation": "перед / до"
-            },
-            {
-              "id": 212,
-              "hebrew": "אחרי",
-              "transliteration": "ахарі",
-              "translation": "після"
-            },
-            {
-              "id": 213,
-              "hebrew": "בין",
-              "transliteration": "бейн",
-              "translation": "між"
-            },
-            {
-              "id": 214,
-              "hebrew": "ליד",
-              "transliteration": "ліяд",
-              "translation": "біля / коло"
-            },
-            {
-              "id": 215,
-              "hebrew": "מול",
-              "transliteration": "муль",
-              "translation": "навпроти"
-            },
-            {
-              "id": 216,
-              "hebrew": "בתוך",
-              "transliteration": "бетох",
-              "translation": "всередині"
-            },
-            {
-              "id": 217,
-              "hebrew": "חוץ מ-",
-              "transliteration": "хуц мі-",
-              "translation": "крім"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "electricity_vocabulary",
-      "title": "електрика",
-      "words": [
-        {
-          "id": 1,
-          "hebrew": "חשמל",
-          "transliteration": "хашмаль",
-          "translation": "електрика"
-        },
-        {
-          "id": 2,
-          "hebrew": "זרם",
-          "transliteration": "зерем",
-          "translation": "електричний струм"
-        },
-        {
-          "id": 3,
-          "hebrew": "מתח",
-          "transliteration": "метах",
-          "translation": "напруга"
-        },
-        {
-          "id": 4,
-          "hebrew": "התנגדות",
-          "transliteration": "хітнгудут",
-          "translation": "опір"
-        },
-        {
-          "id": 5,
-          "hebrew": "הספק",
-          "transliteration": "хеспак",
-          "translation": "потужність"
-        },
-        {
-          "id": 6,
-          "hebrew": "מעגל",
-          "transliteration": "маагаль",
-          "translation": "електричне коло"
-        },
-        {
-          "id": 7,
-          "hebrew": "קצר",
-          "transliteration": "кецер",
-          "translation": "коротке замикання"
-        },
-        {
-          "id": 8,
-          "hebrew": "מוליך",
-          "transliteration": "моліх",
-          "translation": "провідник"
-        },
-        {
-          "id": 9,
-          "hebrew": "מבודד",
-          "transliteration": "меводед",
-          "translation": "ізолятор / ізольований"
-        },
-        {
-          "id": 10,
-          "hebrew": "כבל",
-          "transliteration": "кабель",
-          "translation": "кабель"
-        },
-        {
-          "id": 11,
-          "hebrew": "חוט",
-          "transliteration": "хут",
-          "translation": "дріт / провід"
-        },
-        {
-          "id": 12,
-          "hebrew": "שקע",
-          "transliteration": "шеке",
-          "translation": "розетка"
-        },
-        {
-          "id": 13,
-          "hebrew": "תקע",
-          "transliteration": "таке",
-          "translation": "штепсель / вилка"
-        },
-        {
-          "id": 14,
-          "hebrew": "מתג",
-          "transliteration": "метаг",
-          "translation": "вимикач"
-        },
-        {
-          "id": 15,
-          "hebrew": "נתיך",
-          "transliteration": "натіх",
-          "translation": "запобіжник"
-        },
-        {
-          "id": 16,
-          "hebrew": "לוח חשמל",
-          "transliteration": "луах хашмаль",
-          "translation": "електрощит"
-        },
-        {
-          "id": 17,
-          "hebrew": "מפסק אוטומטי",
-          "transliteration": "мапсек оутомати",
-          "translation": "автоматичний вимикач"
-        },
-        {
-          "id": 18,
-          "hebrew": "פחת",
-          "transliteration": "пахат",
-          "translation": "ПЗВ (диференційний захист)"
-        },
-        {
-          "id": 19,
-          "hebrew": "הארקה",
-          "transliteration": "аарка",
-          "translation": "заземлення"
-        },
-        {
-          "id": 20,
-          "hebrew": "מנוע",
-          "transliteration": "маноа",
-          "translation": "двигун"
-        },
-        {
-          "id": 21,
-          "hebrew": "גנרטור",
-          "transliteration": "генератор",
-          "translation": "генератор"
-        },
-        {
-          "id": 22,
-          "hebrew": "שנאי",
-          "transliteration": "шанаї",
-          "translation": "трансформатор"
-        },
-        {
-          "id": 23,
-          "hebrew": "סוללה",
-          "transliteration": "сулаля",
-          "translation": "батарейка"
-        },
-        {
-          "id": 24,
-          "hebrew": "מצבר",
-          "transliteration": "мицвар",
-          "translation": "акумулятор"
-        },
-        {
-          "id": 25,
-          "hebrew": "קוטב",
-          "transliteration": "котев",
-          "translation": "полюс"
-        },
-        {
-          "id": 26,
-          "hebrew": "פאזה",
-          "transliteration": "фаза",
-          "translation": "фаза"
-        },
-        {
-          "id": 27,
-          "hebrew": "אפס",
-          "transliteration": "ефес",
-          "translation": "нульовий провід"
-        },
-        {
-          "id": 28,
-          "hebrew": "תדר",
-          "transliteration": "тедер",
-          "translation": "частота"
-        },
-        {
-          "id": 29,
-          "hebrew": "שדה מגנטי",
-          "transliteration": "сде магнеті",
-          "translation": "магнітне поле"
-        },
-        {
-          "id": 30,
-          "hebrew": "מדידה",
-          "transliteration": "медіда",
-          "translation": "вимірювання"
-        },
-        {
-          "id": 31,
-          "hebrew": "רב מודד",
-          "transliteration": "рав модед",
-          "translation": "мультиметр"
-        },
-        {
-          "id": 32,
-          "hebrew": "בדיקה",
-          "transliteration": "бдика",
-          "translation": "перевірка"
-        },
-        {
-          "id": 33,
-          "hebrew": "בטיחות",
-          "transliteration": "бетіхут",
-          "translation": "безпека"
-        },
-        {
-          "id": 34,
-          "hebrew": "סכנה",
-          "transliteration": "сакана",
-          "translation": "небезпека"
-        },
-        {
-          "id": 35,
-          "hebrew": "אזהרה",
-          "transliteration": "азара",
-          "translation": "попередження"
-        },
-        {
-          "id": 36,
-          "hebrew": "מערכת",
-          "transliteration": "маарехет",
-          "translation": "система"
-        },
-        {
-          "id": 37,
-          "hebrew": "פיקוד",
-          "transliteration": "пікуд",
-          "translation": "керування"
-        },
-        {
-          "id": 38,
-          "hebrew": "בקרה",
-          "transliteration": "бакара",
-          "translation": "контроль"
-        },
-        {
-          "id": 39,
-          "hebrew": "חיישן",
-          "transliteration": "хайшен",
-          "translation": "датчик"
-        },
-        {
-          "id": 40,
-          "hebrew": "ממסר",
-          "transliteration": "мімсар",
-          "translation": "реле"
-        },
-        {
-          "id": 41,
-          "hebrew": "סליל",
-          "transliteration": "сліль",
-          "translation": "котушка / обмотка"
-        },
-        {
-          "id": 42,
-          "hebrew": "מגנט",
-          "transliteration": "магнет",
-          "translation": "магніт"
-        },
-        {
-          "id": 43,
-          "hebrew": "אנרגיה",
-          "transliteration": "енергія",
-          "translation": "енергія"
-        },
-        {
-          "id": 44,
-          "hebrew": "צריכה",
-          "transliteration": "цріха",
-          "translation": "споживання"
-        },
-        {
-          "id": 45,
-          "hebrew": "מונה",
-          "transliteration": "моне",
-          "translation": "лічильник"
-        },
-        {
-          "id": 46,
-          "hebrew": "חשמлай",
-          "transliteration": "хашмалай",
-          "translation": "електрик"
-        },
-        {
-          "id": 47,
-          "hebrew": "טכנאי",
-          "transliteration": "технаї",
-          "translation": "технік"
-        },
-        {
-          "id": 48,
-          "hebrew": "התקנה",
-          "transliteration": "аткана",
-          "translation": "монтаж / встановлення"
-        },
-        {
-          "id": 49,
-          "hebrew": "תיקון",
-          "transliteration": "тікун",
-          "translation": "ремонт"
-        },
-        {
-          "id": 50,
-          "hebrew": "תחזוקה",
-          "transliteration": "тахзука",
-          "translation": "технічне обслуговування"
-        },
-        {
-          "id": 51,
-          "hebrew": "דיודה",
-          "transliteration": "діода",
-          "translation": "діод"
-        },
-        {
-          "id": 52,
-          "hebrew": "טרנзиסטור",
-          "transliteration": "транзистор",
-          "translation": "транзистор"
-        },
-        {
-          "id": 53,
-          "hebrew": "קבל",
-          "transliteration": "каваль",
-          "translation": "конденсатор"
-        },
-        {
-          "id": 54,
-          "hebrew": "מעגל משולב",
-          "transliteration": "маагаль мешалав",
-          "translation": "мікросхема"
-        },
-        {
-          "id": 55,
-          "hebrew": "לוח אם",
-          "transliteration": "луах ем",
-          "translation": "материнська плата"
-        },
-        {
-          "id": 56,
-          "hebrew": "מוליך למחצה",
-          "transliteration": "моліх ле-меца",
-          "translation": "напівпровідник"
-        },
-        {
-          "id": 57,
-          "hebrew": "תאורה",
-          "transliteration": "теура",
-          "translation": "освітлення"
-        },
-        {
-          "id": 58,
-          "hebrew": "מנורה",
-          "transliteration": "менора",
-          "translation": "світильник"
-        },
-        {
-          "id": 59,
-          "hebrew": "נורה",
-          "transliteration": "нора",
-          "translation": "лампочка"
-        },
-        {
-          "id": 60,
-          "hebrew": "ספק כוח",
-          "transliteration": "сапак коах",
-          "translation": "блок живлення"
-        },
-        {
-          "id": 61,
-          "hebrew": "ממיר",
-          "transliteration": "мамр",
-          "translation": "інвертор"
-        },
-        {
-          "id": 62,
-          "hebrew": "תדר רדיו",
-          "transliteration": "тедер радіо",
-          "translation": "радіочастота"
-        },
-        {
-          "id": 63,
-          "hebrew": "אות",
-          "transliteration": "от",
-          "translation": "сигнал"
-        },
-        {
-          "id": 64,
-          "hebrew": "רעש",
-          "transliteration": "рееш",
-          "translation": "перешкоди / шум"
-        },
-        {
-          "id": 65,
-          "hebrew": "הפרעה",
-          "transliteration": "hафраа",
-          "translation": "збій / перешкода"
-        },
-        {
-          "id": 66,
-          "hebrew": "קוטبيות",
-          "transliteration": "кутьюїт",
-          "translation": "полярність"
-        },
-        {
-          "id": 67,
-          "hebrew": "בידוד",
-          "transliteration": "бідуд",
-          "translation": "ізоляція"
-        },
-        {
-          "id": 68,
-          "hebrew": "תקלה",
-          "transliteration": "такала",
-          "translation": "несправність"
-        },
-        {
-          "id": 69,
-          "hebrew": "אבחון",
-          "transliteration": "авхун",
-          "translation": "діагностика"
-        },
-        {
-          "id": 70,
-          "hebrew": "קלט",
-          "transliteration": "калет",
-          "translation": "вхід"
-        },
-        {
-          "id": 71,
-          "hebrew": "פלט",
-          "transliteration": "пелет",
-          "translation": "вихід"
-        },
-        {
-          "id": 72,
-          "hebrew": "ארכיטեկטורה",
-          "transliteration": "архітектура",
-          "translation": "архітектура"
-        },
-        {
-          "id": 73,
-          "hebrew": "תכנון",
-          "transliteration": "технон",
-          "translation": "проєктування"
-        },
-        {
-          "id": 74,
-          "hebrew": "תרשים",
-          "transliteration": "таршім",
-          "translation": "схема / креслення"
-        },
-        {
-          "id": 75,
-          "hebrew": "תרשים זרימה",
-          "transliteration": "таршім зріма",
-          "translation": "блок-схема"
-        },
-        {
-          "id": 76,
-          "hebrew": "קוד",
-          "transliteration": "код",
-          "translation": "код"
-        },
-        {
-          "id": 77,
-          "hebrew": "תוכנה",
-          "transliteration": "тохна",
-          "translation": "програмне забезпечення"
-        },
-        {
-          "id": 78,
-          "hebrew": "חומרה",
-          "transliteration": "хумра",
-          "translation": "апаратне забезпечення"
-        },
-        {
-          "id": 79,
-          "hebrew": "מארז",
-          "transliteration": "маарэз",
-          "translation": "корпус"
-        },
-        {
-          "id": 80,
-          "hebrew": "מאוורр",
-          "transliteration": "меваер",
-          "translation": "вентилятор"
-        },
-        {
-          "id": 81,
-          "hebrew": "קירור",
-          "transliteration": "кірур",
-          "translation": "охолодження"
-        },
-        {
-          "id": 82,
-          "hebrew": "חימום",
-          "transliteration": "хімум",
-          "translation": "нагрів"
-        },
-        {
-          "id": 83,
-          "hebrew": "תרмоסטט",
-          "transliteration": "термостат",
-          "translation": "термостат"
-        },
-        {
-          "id": 84,
-          "hebrew": "חיישן טמפרטורה",
-          "transliteration": "хайшен температура",
-          "translation": "датчик температури"
-        },
-        {
-          "id": 85,
-          "hebrew": "לחץ",
-          "transliteration": "лахац",
-          "translation": "тиск"
-        },
-        {
-          "id": 86,
-          "hebrew": "שסתום",
-          "transliteration": "шастум",
-          "translation": "клапан"
-        },
-        {
-          "id": 87,
-          "hebrew": "פנوماتיка",
-          "transliteration": "пнематика",
-          "translation": "пневматика"
-        },
-        {
-          "id": 88,
-          "hebrew": "гідравліка",
-          "transliteration": "гідравліка",
-          "translation": "гідравліка"
-        },
-        {
-          "id": 89,
-          "hebrew": "בוכна",
-          "transliteration": "бухна",
-          "translation": "поршень / циліндр"
-        },
-        {
-          "id": 90,
-          "hebrew": "מנוע צעדים",
-          "transliteration": "маноа цеадім",
-          "translation": "кроковий двигун"
-        },
-        {
-          "id": 91,
-          "hebrew": "מהירות סיבוב",
-          "transliteration": "махірут сівуб",
-          "translation": "швидкість обертання"
-        },
-        {
-          "id": 92,
-          "hebrew": "מומנט",
-          "transliteration": "момент",
-          "translation": "крутний момент"
-        },
-        {
-          "id": 93,
-          "hebrew": "גלגלת",
-          "transliteration": "гальгелет",
-          "translation": "ролик / шків"
-        },
-        {
-          "id": 94,
-          "hebrew": "רצועת הנעה",
-          "transliteration": "рицуат hанеа",
-          "translation": "приводний ремінь"
-        },
-        {
-          "id": 95,
-          "hebrew": "מיסב",
-          "transliteration": "місав",
-          "translation": "підшипник"
-        },
-        {
-          "id": 96,
-          "hebrew": "ציר",
-          "transliteration": "цір",
-          "translation": "вал / вісь"
-        },
-        {
-          "id": 97,
-          "hebrew": "קлем",
-          "transliteration": "клема",
-          "translation": "клема"
-        },
-        {
-          "id": 98,
-          "hebrew": "הלחמה",
-          "transliteration": "hалахма",
-          "translation": "пайка"
-        },
-        {
-          "id": 99,
-          "hebrew": "מברגה",
-          "transliteration": "мибрега",
-          "translation": "шурупокрут"
-        },
-        {
-          "id": 100,
-          "hebrew": "כלי עבודה",
-          "transliteration": "клей авода",
-          "translation": "інструменти"
-        }
-      ]
-    },
-    {
-      "name": "law_vocabulary",
-      "title": "юриспруденція",
-      "words": [
-        {
-          "id": 1,
-          "hebrew": "חוק",
-          "transliteration": "хок",
-          "translation": "закон"
-        },
-        {
-          "id": 2,
-          "hebrew": "משפט",
-          "transliteration": "мішпат",
-          "translation": "суд / процес"
-        },
-        {
-          "id": 3,
-          "hebrew": "בית משפט",
-          "transliteration": "бейт мішпат",
-          "translation": "суд (установа)"
-        },
-        {
-          "id": 4,
-          "hebrew": "שופט",
-          "transliteration": "шофет",
-          "translation": "суддя"
-        },
-        {
-          "id": 5,
-          "hebrew": "עורך דין",
-          "transliteration": "орех дин",
-          "translation": "адвокат"
-        },
-        {
-          "id": 6,
-          "hebrew": "תובע",
-          "transliteration": "тове",
-          "translation": "позивач / прокурор"
-        },
-        {
-          "id": 7,
-          "hebrew": "נתבע",
-          "transliteration": "нитва",
-          "translation": "відповідач"
-        },
-        {
-          "id": 8,
-          "hebrew": "עד",
-          "transliteration": "ад",
-          "translation": "свідок"
-        },
-        {
-          "id": 9,
-          "hebrew": "ראיה",
-          "transliteration": "рея",
-          "translation": "доказ"
-        },
-        {
-          "id": 10,
-          "hebrew": "הוכחה",
-          "transliteration": "гохаха",
-          "translation": "підтвердження"
-        },
-        {
-          "id": 11,
-          "hebrew": "פסק דין",
-          "transliteration": "псак дин",
-          "translation": "вирок / рішення суду"
-        },
-        {
-          "id": 12,
-          "hebrew": "ערעור",
-          "transliteration": "ерьор",
-          "translation": "апеляція"
-        },
-        {
-          "id": 13,
-          "hebrew": "תיק",
-          "transliteration": "тік",
-          "translation": "справа"
-        },
-        {
-          "id": 14,
-          "hebrew": "פלילי",
-          "transliteration": "плілі",
-          "translation": "кримінальний"
-        },
-        {
-          "id": 15,
-          "hebrew": "אזרחי",
-          "transliteration": "езрахі",
-          "translation": "цивільний"
-        },
-        {
-          "id": 16,
-          "hebrew": "חוזה",
-          "transliteration": "хозе",
-          "translation": "договір / контракт"
-        },
-        {
-          "id": 17,
-          "hebrew": "הסכם",
-          "transliteration": "хескем",
-          "translation": "угода"
-        },
-        {
-          "id": 18,
-          "hebrew": "חתימה",
-          "transliteration": "хатима",
-          "translation": "підпис"
-        },
-        {
-          "id": 19,
-          "hebrew": "הפרת חוזה",
-          "transliteration": "hафрат хозе",
-          "translation": "порушення договору"
-        },
-        {
-          "id": 20,
-          "hebrew": "פיצוי",
-          "transliteration": "піцуй",
-          "translation": "компенсація"
-        },
-        {
-          "id": 21,
-          "hebrew": "עבירה",
-          "transliteration": "авера",
-          "translation": "правопорушення / злочин"
-        },
-        {
-          "id": 22,
-          "hebrew": "פשע",
-          "transliteration": "пеше",
-          "translation": "тяжкий злочин"
-        },
-        {
-          "id": 23,
-          "hebrew": "עונש",
-          "transliteration": "онеш",
-          "translation": "покарання"
-        },
-        {
-          "id": 24,
-          "hebrew": "מאסר",
-          "transliteration": "маасер",
-          "translation": "ув'язнення"
-        },
-        {
-          "id": 25,
-          "hebrew": "קנס",
-          "transliteration": "кнес",
-          "translation": "штраф"
-        },
-        {
-          "id": 26,
-          "hebrew": "מעצר",
-          "transliteration": "маацар",
-          "translation": "арешт / затримання"
-        },
-        {
-          "id": 27,
-          "hebrew": "משטרה",
-          "transliteration": "міштара",
-          "translation": "поліція"
-        },
-        {
-          "id": 28,
-          "hebrew": "חקירה",
-          "transliteration": "хакіра",
-          "translation": "розслідування / допит"
-        },
-        {
-          "id": 29,
-          "hebrew": "זכות",
-          "transliteration": "зхут",
-          "translation": "право"
-        },
-        {
-          "id": 30,
-          "hebrew": "חובה",
-          "transliteration": "хова",
-          "translation": "обов'язок"
-        },
-        {
-          "id": 31,
-          "hebrew": "תקנה",
-          "transliteration": "такана",
-          "translation": "постанова"
-        },
-        {
-          "id": 32,
-          "hebrew": "צו",
-          "transliteration": "цав",
-          "translation": "припис / ордер"
-        },
-        {
-          "id": 33,
-          "hebrew": "צו עיכוב יציאה",
-          "transliteration": "цав ікув яціа",
-          "translation": "заборона виїзду"
-        },
-        {
-          "id": 34,
-          "hebrew": "תביעה",
-          "transliteration": "твіа",
-          "translation": "позов"
-        },
-        {
-          "id": 35,
-          "hebrew": "הגנה",
-          "transliteration": "hагана",
-          "translation": "захист"
-        },
-        {
-          "id": 36,
-          "hebrew": "פשרה",
-          "transliteration": "пшара",
-          "translation": "мирогласна угода / компроміс"
-        },
-        {
-          "id": 37,
-          "hebrew": "בוררות",
-          "transliteration": "боррут",
-          "translation": "арбітраж"
-        },
-        {
-          "id": 38,
-          "hebrew": "נוтаריון",
-          "transliteration": "нотаріон",
-          "translation": "нотаріус"
-        },
-        {
-          "id": 39,
-          "hebrew": "ירושה",
-          "transliteration": "єруша",
-          "translation": "спадщина"
-        },
-        {
-          "id": 40,
-          "hebrew": "צוואה",
-          "transliteration": "цаваа",
-          "translation": "заповіт"
-        },
-        {
-          "id": 41,
-          "hebrew": "נדל\"ן",
-          "transliteration": "надлан",
-          "translation": "нерухомість"
-        },
-        {
-          "id": 42,
-          "hebrew": "בעלות",
-          "transliteration": "балют",
-          "translation": "власність"
-        },
-        {
-          "id": 43,
-          "hebrew": "שכירות",
-          "transliteration": "схірут",
-          "translation": "оренда"
-        },
-        {
-          "id": 44,
-          "hebrew": "משכנתא",
-          "transliteration": "машканта",
-          "translation": "іпотека"
-        },
-        {
-          "id": 45,
-          "hebrew": "מס",
-          "transliteration": "мас",
-          "translation": "податок"
-        },
-        {
-          "id": 46,
-          "hebrew": "מע\"מ",
-          "transliteration": "маам",
-          "translation": "ПДВ"
-        },
-        {
-          "id": 47,
-          "hebrew": "חברה",
-          "transliteration": "хевра",
-          "translation": "компанія"
-        },
-        {
-          "id": 48,
-          "hebrew": "שותפות",
-          "transliteration": "шутфут",
-          "translation": "партнерство"
-        },
-        {
-          "id": 49,
-          "hebrew": "פשיטת רגל",
-          "transliteration": "пшитат регель",
-          "translation": "банкрутство"
-        },
-        {
-          "id": 50,
-          "hebrew": "פירוק",
-          "transliteration": "пірук",
-          "translation": "ліквідація (компанії)"
-        },
-        {
-          "id": 51,
-          "hebrew": "דירקטוריון",
-          "transliteration": "директорьон",
-          "translation": "рада директорів"
-        },
-        {
-          "id": 52,
-          "hebrew": "בעל מניות",
-          "transliteration": "бааль манийот",
-          "translation": "акціонер"
-        },
-        {
-          "id": 53,
-          "hebrew": "תקנון",
-          "transliteration": "такунон",
-          "translation": "статут"
-        },
-        {
-          "id": 54,
-          "hebrew": "זכויות יוצרים",
-          "transliteration": "зхуйот йоцрім",
-          "translation": "авторські права"
-        },
-        {
-          "id": 55,
-          "hebrew": "פטנט",
-          "transliteration": "патент",
-          "translation": "патент"
-        },
-        {
-          "id": 56,
-          "hebrew": "סימן מסחר",
-          "transliteration": "сіман мисхар",
-          "translation": "торгова марка"
-        },
-        {
-          "id": 57,
-          "hebrew": "קניין רוחני",
-          "transliteration": "кеньян рухані",
-          "translation": "інтелектуальна власність"
-        },
-        {
-          "id": 58,
-          "hebrew": "סודיות",
-          "transliteration": "содиют",
-          "translation": "конфіденційність"
-        },
-        {
-          "id": 59,
-          "hebrew": "סודי",
-          "transliteration": "соді",
-          "translation": "секретний"
-        },
-        {
-          "id": 60,
-          "hebrew": "ניגוד עניינים",
-          "transliteration": "нігуд аньїнім",
-          "translation": "конфлікт інтересів"
-        },
-        {
-          "id": 61,
-          "hebrew": "רשלנות",
-          "transliteration": "рашланут",
-          "translation": "недбалість"
-        },
-        {
-          "id": 62,
-          "hebrew": "נזк",
-          "transliteration": "незек",
-          "translation": "збиток / шкода"
-        },
-        {
-          "id": 63,
-          "hebrew": "אחריות",
-          "transliteration": "ахриют",
-          "translation": "відповідальність"
-        },
-        {
-          "id": 64,
-          "hebrew": "ביטוח",
-          "transliteration": "бітух",
-          "translation": "страхування"
-        },
-        {
-          "id": 65,
-          "hebrew": "תנאי",
-          "transliteration": "тнаї",
-          "translation": "умова"
-        },
-        {
-          "id": 66,
-          "hebrew": "סעיף",
-          "transliteration": "саіф",
-          "translation": "стаття (пункт)"
-        },
-        {
-          "id": 67,
-          "hebrew": "נספח",
-          "transliteration": "неспах",
-          "translation": "додаток"
-        },
-        {
-          "id": 68,
-          "hebrew": "מבוא",
-          "transliteration": "маво",
-          "translation": "вступ / преамбула"
-        },
-        {
-          "id": 69,
-          "hebrew": "תוקף",
-          "transliteration": "токеф",
-          "translation": "чинність / термін дії"
-        },
-        {
-          "id": 70,
-          "hebrew": "ביטול",
-          "transliteration": "бітуль",
-          "translation": "скасування"
-        },
-        {
-          "id": 71,
-          "hebrew": "הארכת תוקף",
-          "transliteration": "hааракхатокеф",
-          "translation": "продовження строку"
-        },
-        {
-          "id": 72,
-          "hebrew": "הודעה מוקדמת",
-          "transliteration": "годаа мукдемет",
-          "translation": "попереднє повідомлення"
-        },
-        {
-          "id": 73,
-          "hebrew": "פיטורים",
-          "transliteration": "пітурім",
-          "translation": "звільнення"
-        },
-        {
-          "id": 74,
-          "hebrew": "התפטרות",
-          "transliteration": "hітптерут",
-          "translation": "звільнення за власним бажанням"
-        },
-        {
-          "id": 75,
-          "hebrew": "שכר",
-          "transliteration": "сахар",
-          "translation": "заробітна плата"
-        },
-        {
-          "id": 76,
-          "hebrew": "תנאי העסקה",
-          "transliteration": "тнаей аасака",
-          "translation": "умови праці"
-        },
-        {
-          "id": 77,
-          "hebrew": "יחסי עבודה",
-          "transliteration": "єхасей авода",
-          "translation": "трудові відносини"
-        },
-        {
-          "id": 78,
-          "hebrew": "הסכם קיבוצי",
-          "transliteration": "хескем кібуці",
-          "translation": "колективний договір"
-        },
-        {
-          "id": 79,
-          "hebrew": "שביתה",
-          "transliteration": "швіїта",
-          "translation": "страйк"
-        },
-        {
-          "id": 80,
-          "hebrew": "בורר",
-          "transliteration": "борер",
-          "translation": "арбітр"
-        },
-        {
-          "id": 81,
-          "hebrew": "מוмхе",
-          "transliteration": "мумхе",
-          "translation": "експерт"
-        },
-        {
-          "id": 82,
-          "hebrew": "חוות דעת",
-          "transliteration": "хават даат",
-          "translation": "експертний висновок"
-        },
-        {
-          "id": 83,
-          "hebrew": "תצהיר",
-          "transliteration": "тацхір",
-          "translation": "письмова заява під присягою"
-        },
-        {
-          "id": 84,
-          "hebrew": "פרוטוקול",
-          "transliteration": "протокол",
-          "translation": "протокол"
-        },
-        {
-          "id": 85,
-          "hebrew": "דיון",
-          "transliteration": "дайон",
-          "translation": "слухання"
-        },
-        {
-          "id": 86,
-          "hebrew": "עיכוב",
-          "transliteration": "ікув",
-          "translation": "відстрочка / затримка"
-        },
-        {
-          "id": 87,
-          "hebrew": "הוצאה לפועל",
-          "transliteration": "гоцаа ле-поаль",
-          "translation": "виконавча служба"
-        },
-        {
-          "id": 88,
-          "hebrew": "עיקול",
-          "transliteration": "ікуль",
-          "translation": "арешт майна"
-        },
-        {
-          "id": 89,
-          "hebrew": "חוב",
-          "transliteration": "хов",
-          "translation": "борг"
-        },
-        {
-          "id": 90,
-          "hebrew": "נושה",
-          "transliteration": "ноше",
-          "translation": "кредитор"
-        },
-        {
-          "id": 91,
-          "hebrew": "חייב",
-          "transliteration": "хайєв",
-          "translation": "боржник"
-        },
-        {
-          "id": 92,
-          "hebrew": "ערב",
-          "transliteration": "арев",
-          "translation": "поручитель"
-        },
-        {
-          "id": 93,
-          "hebrew": "ערבות",
-          "transliteration": "арут",
-          "translation": "поручительство"
-        },
-        {
-          "id": 94,
-          "hebrew": "ייפוי כוח",
-          "transliteration": "ефуй коах",
-          "translation": "довіреність"
-        },
-        {
-          "id": 95,
-          "hebrew": "הצהרה",
-          "transliteration": "hацхара",
-          "translation": "декларація"
-        },
-        {
-          "id": 96,
-          "hebrew": "אישור",
-          "transliteration": "ішур",
-          "translation": "дозвіл / підтвердження"
-        },
-        {
-          "id": 97,
-          "hebrew": "רישיון",
-          "transliteration": "рісьон",
-          "translation": "ліцензія"
-        },
-        {
-          "id": 98,
-          "hebrew": "תעודה",
-          "transliteration": "теуда",
-          "translation": "документ / посвідчення"
-        },
-        {
-          "id": 99,
-          "hebrew": "מרשם",
-          "transliteration": "міршам",
-          "translation": "реєстр"
-        },
-        {
-          "id": 100,
-          "hebrew": "תביעה ייצוגית",
-          "transliteration": "твіа яцгуїт",
-          "translation": "колективний позов"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "אני",
+    "tr": "ані",
+    "ua": "я"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "אתה",
+    "tr": "ата",
+    "ua": "ти (чол.)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "את",
+    "tr": "ат",
+    "ua": "ти (жін.)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "הוא",
+    "tr": "гу",
+    "ua": "він"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "היא",
+    "tr": "гі",
+    "ua": "вона"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "אנחנו",
+    "tr": "анахну",
+    "ua": "ми"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "אתם",
+    "tr": "атем",
+    "ua": "ви (чол.)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "אתן",
+    "tr": "атен",
+    "ua": "ви (жін.)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "הם",
+    "tr": "гем",
+    "ua": "вони (чол.)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "הן",
+    "tr": "ген",
+    "ua": "вони (жін.)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "זה",
+    "tr": "зе",
+    "ua": "це (чол.)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "זאת",
+    "tr": "зот",
+    "ua": "це (жін.)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Займенники",
+    "he": "אלה",
+    "tr": "еле",
+    "ua": "ці"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "להיות",
+    "tr": "лігйот",
+    "ua": "бути"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לעשות",
+    "tr": "лаасот",
+    "ua": "робити"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לרוצות",
+    "tr": "лірцоц",
+    "ua": "хотіти"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לדעת",
+    "tr": "ладаат",
+    "ua": "знати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "להבין",
+    "tr": "легавін",
+    "ua": "розуміти"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "להגיד",
+    "tr": "легагід",
+    "ua": "казати / говорити"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לראות",
+    "tr": "лірвот",
+    "ua": "бачити"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לשמוע",
+    "tr": "лішмоа",
+    "ua": "чути"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "ללכת",
+    "tr": "лалехет",
+    "ua": "йти"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לבוא",
+    "tr": "лаво",
+    "ua": "приходити"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לעבוד",
+    "tr": "лаавод",
+    "ua": "працювати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לאכול",
+    "tr": "леохоль",
+    "ua": "їсти"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לשתות",
+    "tr": "лішто",
+    "ua": "пити"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לקנות",
+    "tr": "лікнот",
+    "ua": "купувати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "למכור",
+    "tr": "лімкор",
+    "ua": "продавати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לקרוא",
+    "tr": "лікро",
+    "ua": "читати / кликати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לכתוב",
+    "tr": "ліхтов",
+    "ua": "писати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "ללמוד",
+    "tr": "лільмод",
+    "ua": "вчитися"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לשחק",
+    "tr": "лешахек",
+    "ua": "грати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לחשוב",
+    "tr": "лахшов",
+    "ua": "думати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לפתוח",
+    "tr": "ліфтоах",
+    "ua": "відкривати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לסגור",
+    "tr": "лісгор",
+    "ua": "закривати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לתת",
+    "tr": "латет",
+    "ua": "давати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לקחת",
+    "tr": "лакахат",
+    "ua": "брати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "להביא",
+    "tr": "легаві",
+    "ua": "приносити"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לקבל",
+    "tr": "лекабель",
+    "ua": "отримувати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לאהוב",
+    "tr": "леогев",
+    "ua": "любити"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לשנוא",
+    "tr": "лішноа",
+    "ua": "ненавидіти"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לגור",
+    "tr": "лагар",
+    "ua": "мешкати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לנוח",
+    "tr": "лануах",
+    "ua": "відпочивати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לרוץ",
+    "tr": "ларуц",
+    "ua": "бігти"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לישון",
+    "tr": "лішон",
+    "ua": "спати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לקום",
+    "tr": "лакум",
+    "ua": "вставати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לעזור",
+    "tr": "лаазор",
+    "ua": "допомагати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לנסות",
+    "tr": "ленасот",
+    "ua": "намагатися"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לשנות",
+    "tr": "лешанот",
+    "ua": "змінювати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לשכוח",
+    "tr": "лішхоах",
+    "ua": "забувати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לזכור",
+    "tr": "лізкор",
+    "ua": "пам'ятати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "למצוא",
+    "tr": "лімцо",
+    "ua": "знаходити"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Дієслова",
+    "he": "לאבד",
+    "tr": "леабед",
+    "ua": "втрачати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "בית",
+    "tr": "байт",
+    "ua": "будинок"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "דירה",
+    "tr": "діра",
+    "ua": "квартира"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חדר",
+    "tr": "хедер",
+    "ua": "кімната"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מטבח",
+    "tr": "мітбах",
+    "ua": "кухня"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שירותים",
+    "tr": "шеррутім",
+    "ua": "туалет"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "דלת",
+    "tr": "делет",
+    "ua": "двері"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חלון",
+    "tr": "халон",
+    "ua": "вікно"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שולחן",
+    "tr": "шульхан",
+    "ua": "стіл"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "כיסא",
+    "tr": "кісе",
+    "ua": "стілець"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מיטה",
+    "tr": "міта",
+    "ua": "ліжко"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מים",
+    "tr": "маїм",
+    "ua": "вода"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "אוכל",
+    "tr": "охель",
+    "ua": "їжа"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "לחם",
+    "tr": "лехем",
+    "ua": "хліб"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חלב",
+    "tr": "халав",
+    "ua": "молоко"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "בשר",
+    "tr": "басар",
+    "ua": "м'ясо"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "פרי",
+    "tr": "прі",
+    "ua": "фрукт"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ירק",
+    "tr": "єрек",
+    "ua": "овоч"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "קפה",
+    "tr": "кафе",
+    "ua": "кава"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "תה",
+    "tr": "те",
+    "ua": "чай"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "יום",
+    "tr": "йом",
+    "ua": "день"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "לילה",
+    "tr": "лайла",
+    "ua": "ніч"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "בוקר",
+    "tr": "бокер",
+    "ua": "ранок"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ערב",
+    "tr": "ерев",
+    "ua": "вечір"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שבוע",
+    "tr": "шавуа",
+    "ua": "тиждень"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חודש",
+    "tr": "ходеш",
+    "ua": "місяць"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שנה",
+    "tr": "шана",
+    "ua": "рік"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "זמן",
+    "tr": "зман",
+    "ua": "час"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שעה",
+    "tr": "шаа",
+    "ua": "година"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "רגע",
+    "tr": "рега",
+    "ua": "момент"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "איש",
+    "tr": "іш",
+    "ua": "чоловік"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "אישה",
+    "tr": "іша",
+    "ua": "жінка"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ילד",
+    "tr": "єлед",
+    "ua": "дитина / хлопчик"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ילדה",
+    "tr": "яльда",
+    "ua": "дівчинка"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "משפחה",
+    "tr": "мішпаха",
+    "ua": "сім'я"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "אבא",
+    "tr": "аба",
+    "ua": "батько"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "אימא",
+    "tr": "іма",
+    "ua": "мати"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "בן",
+    "tr": "бен",
+    "ua": "син"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "בת",
+    "tr": "бат",
+    "ua": "дочка"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חבר",
+    "tr": "хавер",
+    "ua": "друг"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "אנשים",
+    "tr": "анашим",
+    "ua": "люди"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "עבודה",
+    "tr": "авода",
+    "ua": "робота"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "כסף",
+    "tr": "кесеф",
+    "ua": "гроші"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מחיר",
+    "tr": "мехір",
+    "ua": "ціна"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חנות",
+    "tr": "ханут",
+    "ua": "магазин"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שוק",
+    "tr": "шук",
+    "ua": "ринок"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "עיר",
+    "tr": "ір",
+    "ua": "місто"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "רחוב",
+    "tr": "рехов",
+    "ua": "вулиця"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "דרך",
+    "tr": "дерех",
+    "ua": "шлях / дорога"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מכונית",
+    "tr": "мехоніт",
+    "ua": "автомобіль"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "אוטובוס",
+    "tr": "отобус",
+    "ua": "автобус"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "רכבת",
+    "tr": "ракевет",
+    "ua": "потяг"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מטוס",
+    "tr": "матос",
+    "ua": "літак"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שדה תעופה",
+    "tr": "сде теупа",
+    "ua": "аеропорт"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מלון",
+    "tr": "малон",
+    "ua": "готель"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ים",
+    "tr": "ям",
+    "ua": "море"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שמש",
+    "tr": "шемеш",
+    "ua": "сонце"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ירח",
+    "tr": "яреах",
+    "ua": "місяць (на небі)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שמים",
+    "tr": "шамаїм",
+    "ua": "небо"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "אוויר",
+    "tr": "авір",
+    "ua": "повітря"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "רוח",
+    "tr": "руах",
+    "ua": "вітер"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "גשם",
+    "tr": "гешем",
+    "ua": "дощ"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "עולם",
+    "tr": "олам",
+    "ua": "світ"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ארץ",
+    "tr": "ерец",
+    "ua": "країна / земля"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מדינה",
+    "tr": "медіна",
+    "ua": "держава"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שפה",
+    "tr": "сафа",
+    "ua": "мова"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מילה",
+    "tr": "міла",
+    "ua": "слово"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ספר",
+    "tr": "сефер",
+    "ua": "книга"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "עט",
+    "tr": "ет",
+    "ua": "ручка"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "נייר",
+    "tr": "ніяр",
+    "ua": "папір"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "טלפון",
+    "tr": "телефон",
+    "ua": "телефон"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מחשב",
+    "tr": "махшев",
+    "ua": "комп'ютер"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "תמונה",
+    "tr": "тмуна",
+    "ua": "картина / фото"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מוזיקה",
+    "tr": "музіка",
+    "ua": "музика"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "סרט",
+    "tr": "серет",
+    "ua": "фільм"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "משחק",
+    "tr": "місхак",
+    "ua": "гра"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "בריאות",
+    "tr": "бріут",
+    "ua": "здоров'я"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "רופא",
+    "tr": "рофе",
+    "ua": "лікар"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "בית חולים",
+    "tr": "бейт холім",
+    "ua": "лікарня"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "תרופה",
+    "tr": "труфа",
+    "ua": "ліки"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חיים",
+    "tr": "хаїм",
+    "ua": "життя"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מוות",
+    "tr": "мавет",
+    "ua": "смерть"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שקר",
+    "tr": "шекер",
+    "ua": "брехня"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "אמת",
+    "tr": "емет",
+    "ua": "правда"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "בעיה",
+    "tr": "беая",
+    "ua": "проблема"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "שאלה",
+    "tr": "шеала",
+    "ua": "запитання"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "תשובה",
+    "tr": "тшува",
+    "ua": "відповідь"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "רעיון",
+    "tr": "реайон",
+    "ua": "ідея"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "סיבה",
+    "tr": "сіба",
+    "ua": "причина"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מקום",
+    "tr": "маком",
+    "ua": "місце"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "צד",
+    "tr": "цад",
+    "ua": "бік / сторона"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חלק",
+    "tr": "хелек",
+    "ua": "частина"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "סוף",
+    "tr": "соф",
+    "ua": "кінець"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "התחלה",
+    "tr": "атхала",
+    "ua": "початок"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "פנים",
+    "tr": "панім",
+    "ua": "обличчя / всередині"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "חוץ",
+    "tr": "хуц",
+    "ua": "зовні"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "לב",
+    "tr": "лев",
+    "ua": "серце"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "ראש",
+    "tr": "рош",
+    "ua": "голова"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "יד",
+    "tr": "яд",
+    "ua": "рука"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "רגל",
+    "tr": "рагель",
+    "ua": "нога"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Іменники",
+    "he": "מפתח",
+    "tr": "маптеах",
+    "ua": "ключ"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "טוב",
+    "tr": "тов",
+    "ua": "добрий / хороший"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "רע",
+    "tr": "ра",
+    "ua": "поганий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "גדול",
+    "tr": "гадоль",
+    "ua": "великий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "קטן",
+    "tr": "катан",
+    "ua": "малий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "חדש",
+    "tr": "хадаш",
+    "ua": "новий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "ישן",
+    "tr": "яшан",
+    "ua": "старий (про речі)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "זקן",
+    "tr": "закен",
+    "ua": "старий (про людину)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "צעיר",
+    "tr": "цаір",
+    "ua": "молодий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "יפה",
+    "tr": "яфе",
+    "ua": "гарний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "מכוער",
+    "tr": "мехоер",
+    "ua": "потворний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "חם",
+    "tr": "хам",
+    "ua": "теплий / гарячий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "קר",
+    "tr": "кар",
+    "ua": "холодний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "מהיר",
+    "tr": "магір",
+    "ua": "швидкий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "איטי",
+    "tr": "іті",
+    "ua": "повільний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "קל",
+    "tr": "каль",
+    "ua": "легкий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "קשה",
+    "tr": "каше",
+    "ua": "важкий / складний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "ארוך",
+    "tr": "арох",
+    "ua": "довгий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "קצר",
+    "tr": "кацар",
+    "ua": "короткий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "נכון",
+    "tr": "нахон",
+    "ua": "правильний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "שגוי",
+    "tr": "шагуй",
+    "ua": "неправильний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "חשוב",
+    "tr": "хашув",
+    "ua": "важливий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "מעניין",
+    "tr": "меан'єн",
+    "ua": "цікавий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "משעמם",
+    "tr": "мешае́м",
+    "ua": "нудний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "שמח",
+    "tr": "сама́х",
+    "ua": "щасливий / радісний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "עצוב",
+    "tr": "ацув",
+    "ua": "сумний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "עייף",
+    "tr": "аєф",
+    "ua": "втомлений"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "רעב",
+    "tr": "раев",
+    "ua": "голодний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "צמא",
+    "tr": "цама",
+    "ua": "спраглий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "נקי",
+    "tr": "накі",
+    "ua": "чистий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "מלוכלך",
+    "tr": "мелохлех",
+    "ua": "брудний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "יקר",
+    "tr": "якар",
+    "ua": "дорогий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "זול",
+    "tr": "золь",
+    "ua": "дешевий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "פתוח",
+    "tr": "патуах",
+    "ua": "відкритий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "סגור",
+    "tr": "сагур",
+    "ua": "закритий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "מתוק",
+    "tr": "маток",
+    "ua": "солодкий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "מלוح",
+    "tr": "малюах",
+    "ua": "солоний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "מר",
+    "tr": "мар",
+    "ua": "гіркий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "שקט",
+    "tr": "шекет",
+    "ua": "тихий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "רועש",
+    "tr": "роеш",
+    "ua": "шумний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "בטוח",
+    "tr": "батуах",
+    "ua": "безпечний / певний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "מסוכן",
+    "tr": "месукан",
+    "ua": "небезпечний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "חופשי",
+    "tr": "хофші",
+    "ua": "вільний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "תפוס",
+    "tr": "тапус",
+    "ua": "зайнятий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "חכם",
+    "tr": "хахам",
+    "ua": "розумний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "טיפש",
+    "tr": "тіпеш",
+    "ua": "дурний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "בריא",
+    "tr": "барі",
+    "ua": "здоровий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "חולה",
+    "tr": "холе",
+    "ua": "хворий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "עשיר",
+    "tr": "ашір",
+    "ua": "багатий"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "עני",
+    "tr": "ані",
+    "ua": "бідний"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прикметники",
+    "he": "ריק",
+    "tr": "рік",
+    "ua": "порожній"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "ב-",
+    "tr": "бе-",
+    "ua": "в / на"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "ל-",
+    "tr": "ле-",
+    "ua": "до / для"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "מ-",
+    "tr": "мі-",
+    "ua": "з / від"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "עם",
+    "tr": "ім",
+    "ua": "з (кимось)"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "בלי",
+    "tr": "блі",
+    "ua": "без"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "על",
+    "tr": "аль",
+    "ua": "на / про"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "תחת",
+    "tr": "тахат",
+    "ua": "під"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "לפני",
+    "tr": "ліфней",
+    "ua": "перед / до"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "אחרי",
+    "tr": "ахарі",
+    "ua": "після"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "בין",
+    "tr": "бейн",
+    "ua": "між"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "ליד",
+    "tr": "ліяд",
+    "ua": "біля / коло"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "מול",
+    "tr": "муль",
+    "ua": "навпроти"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "בתוך",
+    "tr": "бетох",
+    "ua": "всередині"
+  },
+  {
+    "deck": "Загальновживані слова",
+    "section": "Прийменники",
+    "he": "חוץ מ-",
+    "tr": "хуц мі-",
+    "ua": "крім"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "חשמל",
+    "tr": "хашмаль",
+    "ua": "електрика"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "זרם",
+    "tr": "зерем",
+    "ua": "електричний струм"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מתח",
+    "tr": "метах",
+    "ua": "напруга"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "התנגדות",
+    "tr": "хітнгудут",
+    "ua": "опір"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "הספק",
+    "tr": "хеспак",
+    "ua": "потужність"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מעגל",
+    "tr": "маагаль",
+    "ua": "електричне коло"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "קצר",
+    "tr": "кецер",
+    "ua": "коротке замикання"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מוליך",
+    "tr": "моліх",
+    "ua": "провідник"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מבודד",
+    "tr": "меводед",
+    "ua": "ізолятор / ізольований"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "כבל",
+    "tr": "кабель",
+    "ua": "кабель"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "חוט",
+    "tr": "хут",
+    "ua": "дріт / провід"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "שקע",
+    "tr": "шеке",
+    "ua": "розетка"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תקע",
+    "tr": "таке",
+    "ua": "штепсель / вилка"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מתג",
+    "tr": "метаг",
+    "ua": "вимикач"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "נתיך",
+    "tr": "натіх",
+    "ua": "запобіжник"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "לוח חשמל",
+    "tr": "луах хашмаль",
+    "ua": "електрощит"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מפסק אוטומטי",
+    "tr": "мапсек оутомати",
+    "ua": "автоматичний вимикач"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "פחת",
+    "tr": "пахат",
+    "ua": "ПЗВ (диференційний захист)"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "הארקה",
+    "tr": "аарка",
+    "ua": "заземлення"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מנוע",
+    "tr": "маноа",
+    "ua": "двигун"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "גנרטור",
+    "tr": "генератор",
+    "ua": "генератор"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "שנאי",
+    "tr": "шанаї",
+    "ua": "трансформатор"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "סוללה",
+    "tr": "сулаля",
+    "ua": "батарейка"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מצבר",
+    "tr": "мицвар",
+    "ua": "акумулятор"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "קוטב",
+    "tr": "котев",
+    "ua": "полюс"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "פאזה",
+    "tr": "фаза",
+    "ua": "фаза"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "אפס",
+    "tr": "ефес",
+    "ua": "нульовий провід"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תדר",
+    "tr": "тедер",
+    "ua": "частота"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "שדה מגנטי",
+    "tr": "сде магнеті",
+    "ua": "магнітне поле"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מדידה",
+    "tr": "медіда",
+    "ua": "вимірювання"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "רב מודד",
+    "tr": "рав модед",
+    "ua": "мультиметр"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "בדיקה",
+    "tr": "бдика",
+    "ua": "перевірка"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "בטיחות",
+    "tr": "бетіхут",
+    "ua": "безпека"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "סכנה",
+    "tr": "сакана",
+    "ua": "небезпека"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "אזהרה",
+    "tr": "азара",
+    "ua": "попередження"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מערכת",
+    "tr": "маарехет",
+    "ua": "система"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "פיקוד",
+    "tr": "пікуд",
+    "ua": "керування"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "בקרה",
+    "tr": "бакара",
+    "ua": "контроль"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "חיישן",
+    "tr": "хайшен",
+    "ua": "датчик"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "ממסר",
+    "tr": "мімсар",
+    "ua": "реле"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "סליל",
+    "tr": "сліль",
+    "ua": "котушка / обмотка"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מגנט",
+    "tr": "магнет",
+    "ua": "магніт"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "אנרגיה",
+    "tr": "енергія",
+    "ua": "енергія"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "צריכה",
+    "tr": "цріха",
+    "ua": "споживання"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מונה",
+    "tr": "моне",
+    "ua": "лічильник"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "חשמлай",
+    "tr": "хашмалай",
+    "ua": "електрик"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "טכנאי",
+    "tr": "технаї",
+    "ua": "технік"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "התקנה",
+    "tr": "аткана",
+    "ua": "монтаж / встановлення"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תיקון",
+    "tr": "тікун",
+    "ua": "ремонт"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תחזוקה",
+    "tr": "тахзука",
+    "ua": "технічне обслуговування"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "דיודה",
+    "tr": "діода",
+    "ua": "діод"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "טרנзиסטור",
+    "tr": "транзистор",
+    "ua": "транзистор"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "קבל",
+    "tr": "каваль",
+    "ua": "конденсатор"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מעגל משולב",
+    "tr": "маагаль мешалав",
+    "ua": "мікросхема"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "לוח אם",
+    "tr": "луах ем",
+    "ua": "материнська плата"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מוליך למחצה",
+    "tr": "моліх ле-меца",
+    "ua": "напівпровідник"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תאורה",
+    "tr": "теура",
+    "ua": "освітлення"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מנורה",
+    "tr": "менора",
+    "ua": "світильник"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "נורה",
+    "tr": "нора",
+    "ua": "лампочка"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "ספק כוח",
+    "tr": "сапак коах",
+    "ua": "блок живлення"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "ממיר",
+    "tr": "мамр",
+    "ua": "інвертор"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תדר רדיו",
+    "tr": "тедер радіо",
+    "ua": "радіочастота"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "אות",
+    "tr": "от",
+    "ua": "сигнал"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "רעש",
+    "tr": "рееш",
+    "ua": "перешкоди / шум"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "הפרעה",
+    "tr": "hафраа",
+    "ua": "збій / перешкода"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "קוטبيות",
+    "tr": "кутьюїт",
+    "ua": "полярність"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "בידוד",
+    "tr": "бідуд",
+    "ua": "ізоляція"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תקלה",
+    "tr": "такала",
+    "ua": "несправність"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "אבחון",
+    "tr": "авхун",
+    "ua": "діагностика"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "קלט",
+    "tr": "калет",
+    "ua": "вхід"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "פלט",
+    "tr": "пелет",
+    "ua": "вихід"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "ארכיטեկטורה",
+    "tr": "архітектура",
+    "ua": "архітектура"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תכנון",
+    "tr": "технон",
+    "ua": "проєктування"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תרשים",
+    "tr": "таршім",
+    "ua": "схема / креслення"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תרשים זרימה",
+    "tr": "таршім зріма",
+    "ua": "блок-схема"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "קוד",
+    "tr": "код",
+    "ua": "код"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תוכנה",
+    "tr": "тохна",
+    "ua": "програмне забезпечення"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "חומרה",
+    "tr": "хумра",
+    "ua": "апаратне забезпечення"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מארז",
+    "tr": "маарэз",
+    "ua": "корпус"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מאוורр",
+    "tr": "меваер",
+    "ua": "вентилятор"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "קירור",
+    "tr": "кірур",
+    "ua": "охолодження"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "חימום",
+    "tr": "хімум",
+    "ua": "нагрів"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "תרмоסטט",
+    "tr": "термостат",
+    "ua": "термостат"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "חיישן טמפרטורה",
+    "tr": "хайшен температура",
+    "ua": "датчик температури"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "לחץ",
+    "tr": "лахац",
+    "ua": "тиск"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "שסתום",
+    "tr": "шастум",
+    "ua": "клапан"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "פנوماتיка",
+    "tr": "пнематика",
+    "ua": "пневматика"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "בוכна",
+    "tr": "бухна",
+    "ua": "поршень / циліндр"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מנוע צעדים",
+    "tr": "маноа цеадім",
+    "ua": "кроковий двигун"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מהירות סיבוב",
+    "tr": "махірут сівуб",
+    "ua": "швидкість обертання"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מומנט",
+    "tr": "момент",
+    "ua": "крутний момент"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "גלגלת",
+    "tr": "гальгелет",
+    "ua": "ролик / шків"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "רצועת הנעה",
+    "tr": "рицуат hанеа",
+    "ua": "приводний ремінь"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מיסב",
+    "tr": "місав",
+    "ua": "підшипник"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "ציר",
+    "tr": "цір",
+    "ua": "вал / вісь"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "קлем",
+    "tr": "клема",
+    "ua": "клема"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "הלחמה",
+    "tr": "hалахма",
+    "ua": "пайка"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "מברגה",
+    "tr": "мибрега",
+    "ua": "шурупокрут"
+  },
+  {
+    "deck": "Електрика",
+    "section": null,
+    "he": "כלי עבודה",
+    "tr": "клей авода",
+    "ua": "інструменти"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חוק",
+    "tr": "хок",
+    "ua": "закон"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "משפט",
+    "tr": "мішпат",
+    "ua": "суд / процес"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "בית משפט",
+    "tr": "бейт мішпат",
+    "ua": "суд (установа)"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "שופט",
+    "tr": "шофет",
+    "ua": "суддя"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "עורך דין",
+    "tr": "орех дин",
+    "ua": "адвокат"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תובע",
+    "tr": "тове",
+    "ua": "позивач / прокурор"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "נתבע",
+    "tr": "нитва",
+    "ua": "відповідач"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "עד",
+    "tr": "ад",
+    "ua": "свідок"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ראיה",
+    "tr": "рея",
+    "ua": "доказ"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הוכחה",
+    "tr": "гохаха",
+    "ua": "підтвердження"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פסק דין",
+    "tr": "псак дин",
+    "ua": "вирок / рішення суду"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ערעור",
+    "tr": "ерьор",
+    "ua": "апеляція"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תיק",
+    "tr": "тік",
+    "ua": "справа"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פלילי",
+    "tr": "плілі",
+    "ua": "кримінальний"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "אזרחי",
+    "tr": "езрахі",
+    "ua": "цивільний"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חוזה",
+    "tr": "хозе",
+    "ua": "договір / контракт"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הסכם",
+    "tr": "хескем",
+    "ua": "угода"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חתימה",
+    "tr": "хатима",
+    "ua": "підпис"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הפרת חוזה",
+    "tr": "hафрат хозе",
+    "ua": "порушення договору"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פיצוי",
+    "tr": "піцуй",
+    "ua": "компенсація"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "עבירה",
+    "tr": "авера",
+    "ua": "правопорушення / злочин"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פשע",
+    "tr": "пеше",
+    "ua": "тяжкий злочин"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "עונש",
+    "tr": "онеш",
+    "ua": "покарання"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "מאסר",
+    "tr": "маасер",
+    "ua": "ув'язнення"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "קנס",
+    "tr": "кнес",
+    "ua": "штраф"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "מעצר",
+    "tr": "маацар",
+    "ua": "арешт / затримання"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "משטרה",
+    "tr": "міштара",
+    "ua": "поліція"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חקירה",
+    "tr": "хакіра",
+    "ua": "розслідування / допит"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "זכות",
+    "tr": "зхут",
+    "ua": "право"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חובה",
+    "tr": "хова",
+    "ua": "обов'язок"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תקנה",
+    "tr": "такана",
+    "ua": "постанова"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "צו",
+    "tr": "цав",
+    "ua": "припис / ордер"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "צו עיכוב יציאה",
+    "tr": "цав ікув яціа",
+    "ua": "заборона виїзду"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תביעה",
+    "tr": "твіа",
+    "ua": "позов"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הגנה",
+    "tr": "hагана",
+    "ua": "захист"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פשרה",
+    "tr": "пшара",
+    "ua": "мирогласна угода / компроміс"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "בוררות",
+    "tr": "боррут",
+    "ua": "арбітраж"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "נוтаריון",
+    "tr": "нотаріон",
+    "ua": "нотаріус"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ירושה",
+    "tr": "єруша",
+    "ua": "спадщина"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "צוואה",
+    "tr": "цаваа",
+    "ua": "заповіт"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "נדל\"ן",
+    "tr": "надлан",
+    "ua": "нерухомість"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "בעלות",
+    "tr": "балют",
+    "ua": "власність"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "שכירות",
+    "tr": "схірут",
+    "ua": "оренда"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "משכנתא",
+    "tr": "машканта",
+    "ua": "іпотека"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "מס",
+    "tr": "мас",
+    "ua": "податок"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "מע\"מ",
+    "tr": "маам",
+    "ua": "ПДВ"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חברה",
+    "tr": "хевра",
+    "ua": "компанія"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "שותפות",
+    "tr": "шутфут",
+    "ua": "партнерство"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פשיטת רגל",
+    "tr": "пшитат регель",
+    "ua": "банкрутство"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פירוק",
+    "tr": "пірук",
+    "ua": "ліквідація (компанії)"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "דירקטוריון",
+    "tr": "директорьон",
+    "ua": "рада директорів"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "בעל מניות",
+    "tr": "бааль манийот",
+    "ua": "акціонер"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תקנון",
+    "tr": "такунон",
+    "ua": "статут"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "זכויות יוצרים",
+    "tr": "зхуйот йоцрім",
+    "ua": "авторські права"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פטנט",
+    "tr": "патент",
+    "ua": "патент"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "סימן מסחר",
+    "tr": "сіман мисхар",
+    "ua": "торгова марка"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "קניין רוחני",
+    "tr": "кеньян рухані",
+    "ua": "інтелектуальна власність"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "סודיות",
+    "tr": "содиют",
+    "ua": "конфіденційність"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "סודי",
+    "tr": "соді",
+    "ua": "секретний"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ניגוד עניינים",
+    "tr": "нігуд аньїнім",
+    "ua": "конфлікт інтересів"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "רשלנות",
+    "tr": "рашланут",
+    "ua": "недбалість"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "נזк",
+    "tr": "незек",
+    "ua": "збиток / шкода"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "אחריות",
+    "tr": "ахриют",
+    "ua": "відповідальність"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ביטוח",
+    "tr": "бітух",
+    "ua": "страхування"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תנאי",
+    "tr": "тнаї",
+    "ua": "умова"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "סעיף",
+    "tr": "саіф",
+    "ua": "стаття (пункт)"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "נספח",
+    "tr": "неспах",
+    "ua": "додаток"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "מבוא",
+    "tr": "маво",
+    "ua": "вступ / преамбула"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תוקף",
+    "tr": "токеф",
+    "ua": "чинність / термін дії"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ביטול",
+    "tr": "бітуль",
+    "ua": "скасування"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הארכת תוקף",
+    "tr": "hааракхатокеф",
+    "ua": "продовження строку"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הודעה מוקדמת",
+    "tr": "годаа мукдемет",
+    "ua": "попереднє повідомлення"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פיטורים",
+    "tr": "пітурім",
+    "ua": "звільнення"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "התפטרות",
+    "tr": "hітптерут",
+    "ua": "звільнення за власним бажанням"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "שכר",
+    "tr": "сахар",
+    "ua": "заробітна плата"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תנאי העסקה",
+    "tr": "тнаей аасака",
+    "ua": "умови праці"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "יחסי עבודה",
+    "tr": "єхасей авода",
+    "ua": "трудові відносини"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הסכם קיבוצי",
+    "tr": "хескем кібуці",
+    "ua": "колективний договір"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "שביתה",
+    "tr": "швіїта",
+    "ua": "страйк"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "בורר",
+    "tr": "борер",
+    "ua": "арбітр"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "מוмхе",
+    "tr": "мумхе",
+    "ua": "експерт"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חוות דעת",
+    "tr": "хават даат",
+    "ua": "експертний висновок"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תצהיר",
+    "tr": "тацхір",
+    "ua": "письмова заява під присягою"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "פרוטוקול",
+    "tr": "протокол",
+    "ua": "протокол"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "דיון",
+    "tr": "дайон",
+    "ua": "слухання"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "עיכוב",
+    "tr": "ікув",
+    "ua": "відстрочка / затримка"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הוצאה לפועל",
+    "tr": "гоцаа ле-поаль",
+    "ua": "виконавча служба"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "עיקול",
+    "tr": "ікуль",
+    "ua": "арешт майна"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חוב",
+    "tr": "хов",
+    "ua": "борг"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "נושה",
+    "tr": "ноше",
+    "ua": "кредитор"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "חייב",
+    "tr": "хайєв",
+    "ua": "боржник"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ערב",
+    "tr": "арев",
+    "ua": "поручитель"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ערבות",
+    "tr": "арут",
+    "ua": "поручительство"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "ייפוי כוח",
+    "tr": "ефуй коах",
+    "ua": "довіреність"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "הצהרה",
+    "tr": "hацхара",
+    "ua": "декларація"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "אישור",
+    "tr": "ішур",
+    "ua": "дозвіл / підтвердження"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "רישיון",
+    "tr": "рісьон",
+    "ua": "ліцензія"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תעודה",
+    "tr": "теуда",
+    "ua": "документ / посвідчення"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "מרשם",
+    "tr": "міршам",
+    "ua": "реєстр"
+  },
+  {
+    "deck": "Юриспруденція",
+    "section": null,
+    "he": "תביעה ייצוגית",
+    "tr": "твіа яцгуїт",
+    "ua": "колективний позов"
+  }
+]
