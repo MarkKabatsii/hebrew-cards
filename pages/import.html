@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Імпорт слів — Іврит</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+  </head>
+  <body data-root="../" data-page="add">
+    <nav id="nav"></nav>
+
+    <main class="main">
+      <header class="hero">
+        <h1>Імпорт слів</h1>
+        <p>Вставте список або завантажте файл.</p>
+      </header>
+
+      <section class="panel">
+        <label class="field"
+          ><span>Категорія</span
+          ><select id="category"></select
+        ></label>
+        <label class="field" id="sectionWrap"
+          ><span>Розділ</span
+          ><select id="section"></select
+        ></label>
+        <p class="muted">
+          Категорія і розділ застосовуються до рядків, де їх не вказано.
+        </p>
+
+        <label class="field"
+          ><span>Список слів</span>
+          <textarea
+            id="text"
+            spellcheck="false"
+            placeholder="אֲנִי;ані;я&#10;אַתָּה;ата;ти (чол.)"
+          ></textarea>
+        </label>
+
+        <details>
+          <summary>Формат списку</summary>
+          <p>
+            Одне слово в рядку: <code>іврит;транскрипція;переклад</code>.
+            Роздільник: <code>;</code>, <code>|</code> або Tab (так вставляється
+            з Excel чи Google Таблиць). Необов'язково четверта й п'ята колонки:
+            категорія та розділ.
+          </p>
+          <pre>
+אֲנִי;ані;я
+הוּא;hу;він;Загальновживані слова;Займенники
+חַשְׁמַל;хашмаль;електрика;Електрика</pre
+          >
+          <p>
+            Також приймається JSON:
+            <code>[{"he":"אֲנִי","tr":"ані","ua":"я"}]</code>, у кожного об'єкта
+            можна додати <code>deck</code> і <code>section</code>.
+          </p>
+        </details>
+
+        <label class="field"
+          ><span>Або файл (.txt, .csv, .json)</span>
+          <input id="file" type="file" accept=".txt,.csv,.tsv,.json"
+        /></label>
+
+        <div class="row">
+          <button class="btn-secondary" id="check" type="button">
+            Перевірити
+          </button>
+          <button class="btn-primary" id="doImport" type="button">
+            Імпортувати
+          </button>
+        </div>
+        <p class="msg" id="msg" role="status"></p>
+        <ul class="report" id="report"></ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/taxonomy.js"></script>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/parser.js"></script>
+    <script src="../js/import.js"></script>
+  </body>
+</html>

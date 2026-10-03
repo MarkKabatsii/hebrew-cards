@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Колоди — Іврит</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/decks.css" />
+  </head>
+  <body data-root="../" data-page="decks">
+    <nav id="nav"></nav>
+
+    <main class="main">
+      <header class="hero"><h1>Ваші колоди</h1></header>
+      <div class="decks-page">
+        <div class="decks-actions">
+          <a class="btn-primary" href="../index.html">Почати повторення</a>
+          <a class="btn-secondary" href="add.html">Додати слово</a>
+          <a class="btn-secondary" href="import.html">Імпорт списком</a>
+        </div>
+        <div class="stats" id="stats"></div>
+        <div class="deck-grid" id="decks"></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/taxonomy.js"></script>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/decks.js"></script>
+  </body>
+</html>

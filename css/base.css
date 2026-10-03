@@ -1,0 +1,310 @@
+/* Токени, скидання, меню, кнопки, чипи, прогрес — спільне для всіх сторінок */
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --text-2: #6e6e73;
+  --text-nav: #424245;
+  --fill: #e8e8ed;
+  --line: #d2d2d7;
+  --accent: #0071e3;
+  --ok: #1d7a4d;
+  --bad: #c4271c;
+
+  --font-ui: 'Onest', system-ui, sans-serif;
+  --font-he: 'Frank Ruhl Libre', serif;
+
+  --shadow-card: 0 2px 6px #0000000d, 0 24px 48px #0000001a;
+  --shadow-panel: 0 2px 6px #0000000d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 0;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Меню */
+.nav {
+  height: 52px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffffcc;
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+.logo-mark {
+  font-family: var(--font-he);
+  font-size: 22px;
+  color: var(--accent);
+}
+.logo-mark.big {
+  font-size: 64px;
+  margin-bottom: 8px;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+}
+.nav-links a {
+  color: var(--text-nav);
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: var(--text);
+}
+.nav-links a[aria-current='page'] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Сторінка */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 40px 48px 64px;
+}
+.hero {
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.hero p {
+  margin: 10px 0 0;
+  font-size: 19px;
+  color: var(--text-2);
+}
+.stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Розділи й підрозділи */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.chip {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 22px;
+  background: var(--fill);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+}
+.chip[aria-pressed='true'] {
+  background: var(--text);
+  color: #fff;
+}
+.segmented {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 14px;
+  background: var(--fill);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.seg {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-nav);
+  font-size: 14px;
+  font-weight: 500;
+}
+.seg[aria-pressed='true'] {
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 1px 3px #0000001a;
+}
+
+/* Кнопки */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 32px;
+  border-radius: 26px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-secondary {
+  background: var(--fill);
+  color: var(--text);
+}
+.btn-secondary:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.btn-text {
+  background: none;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px;
+}
+
+/* Прогрес */
+.progress {
+  width: min(640px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.progress-track {
+  width: min(640px, 100%);
+  height: 4px;
+  border-radius: 2px;
+  background: var(--line);
+}
+.progress .progress-track {
+  width: 100%;
+}
+.progress-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+/* Порожній стан */
+.empty {
+  width: min(640px, 100%);
+  padding: 48px 24px;
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow-panel);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.empty h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.empty p {
+  margin: 0 0 12px;
+  font-size: 17px;
+  color: var(--text-2);
+}
+.empty .row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    padding: 0 16px;
+    gap: 8px;
+  }
+  .logo span:last-child {
+    display: none;
+  }
+  .nav-links {
+    gap: 14px;
+  }
+  .nav .btn-text {
+    padding: 8px 0;
+  }
+  .main {
+    padding: 24px 16px 48px;
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 17px;
+  }
+  .stack {
+    gap: 20px;
+  }
+}

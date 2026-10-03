@@ -1,0 +1,187 @@
+/* Картка, що перевертається; навігація; квіз */
+.flip-scene {
+  width: min(640px, 100%);
+  height: 340px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  perspective: 1400px;
+}
+.flip-scene.is-quiz {
+  height: 280px;
+}
+button.flip-scene {
+  cursor: pointer;
+}
+
+.flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.flip.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--surface);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px;
+  text-align: center;
+}
+.face-back {
+  transform: rotateY(180deg);
+  gap: 10px;
+}
+
+.card-he {
+  font-family: var(--font-he);
+  font-weight: 700;
+  font-size: clamp(64px, 20vw, 120px);
+  line-height: 1.1;
+}
+.is-quiz .card-he {
+  font-size: clamp(56px, 18vw, 104px);
+}
+.card-hint {
+  font-size: 15px;
+  color: var(--text-2);
+}
+.card-translit {
+  font-size: 24px;
+  color: var(--text-2);
+  letter-spacing: 0.02em;
+}
+.card-meaning {
+  font-size: clamp(32px, 9vw, 52px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.is-quiz .card-translit {
+  font-size: 22px;
+}
+.is-quiz .card-meaning {
+  font-size: clamp(28px, 8vw, 44px);
+}
+
+.card-nav {
+  width: min(640px, 100%);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Квіз */
+.score-row {
+  width: min(640px, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.score {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pill {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+.pill-ok {
+  background: #e3f5ea;
+  color: var(--ok);
+}
+.pill-bad {
+  background: #fde8e6;
+  color: var(--bad);
+}
+.meta {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.options {
+  width: min(640px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.option {
+  height: 64px;
+  padding: 0 16px;
+  border-radius: 16px;
+  background: var(--fill);
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    opacity 0.2s;
+}
+.option:not(:disabled):hover {
+  background: #dcdce1;
+}
+.option:disabled {
+  cursor: default;
+}
+.option.is-correct {
+  background: var(--ok);
+  color: #fff;
+}
+.option.is-wrong {
+  background: var(--bad);
+  color: #fff;
+}
+.option.is-dim {
+  opacity: 0.45;
+}
+.next-slot {
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip {
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .flip-scene {
+    height: 320px;
+  }
+  .flip-scene.is-quiz {
+    height: 260px;
+  }
+  .card-nav .btn-primary,
+  .card-nav .btn-secondary {
+    flex: 1;
+    padding: 0 16px;
+  }
+  .option {
+    font-size: 17px;
+    height: 60px;
+  }
+}

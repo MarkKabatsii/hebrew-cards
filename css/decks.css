@@ -1,0 +1,88 @@
+/* Екран «Колоди» */
+.decks-page {
+  width: min(1088px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.stat {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.stat-value {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.stat-label {
+  font-size: 15px;
+  color: var(--text-2);
+}
+
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.deck {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: var(--shadow-panel);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+.deck:hover {
+  box-shadow: var(--shadow-card);
+}
+.deck-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.deck-he {
+  font-family: var(--font-he);
+  font-weight: 700;
+  font-size: 44px;
+}
+.deck-count {
+  font-size: 14px;
+  color: var(--text-2);
+}
+.deck-name {
+  font-size: 22px;
+  font-weight: 600;
+}
+.deck-sub {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-2);
+}
+.deck-review {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bad);
+}
+.decks-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .deck-grid {
+    grid-template-columns: 1fr;
+  }
+}

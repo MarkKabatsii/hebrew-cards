@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Додати слово — Іврит</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+  </head>
+  <body data-root="../" data-page="add">
+    <nav id="nav"></nav>
+
+    <main class="main">
+      <header class="hero">
+        <h1>Додайте нове слово</h1>
+        <p>
+          Або
+          <a href="import.html" style="color: var(--accent)"
+            >імпортуйте список</a
+          >
+          одразу.
+        </p>
+      </header>
+
+      <form class="panel" id="form" novalidate>
+        <label class="field"
+          ><span>Категорія</span
+          ><select id="category"></select
+        ></label>
+        <label class="field" id="sectionWrap"
+          ><span>Розділ</span
+          ><select id="section"></select
+        ></label>
+        <label class="field"
+          ><span>Іврит</span>
+          <input
+            id="he"
+            class="input-he"
+            lang="he"
+            dir="rtl"
+            autocomplete="off"
+            placeholder="שָׁלוֹם"
+        /></label>
+        <label class="field"
+          ><span>Транскрипція</span>
+          <input id="tr" autocomplete="off" placeholder="шалом"
+        /></label>
+        <label class="field"
+          ><span>Переклад</span>
+          <input id="ua" autocomplete="off" placeholder="привіт, мир"
+        /></label>
+        <button class="btn-primary" type="submit">Додати слово</button>
+        <p class="msg" id="msg" role="status"></p>
+      </form>
+
+      <section class="panel">
+        <h2 id="listTitle">Слова</h2>
+        <p class="muted" id="addedEmpty">У цьому розділі поки що немає слів.</p>
+        <ul class="word-list" id="added"></ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/taxonomy.js"></script>
+    <script src="../js/store.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/parser.js"></script>
+    <script src="../js/add.js"></script>
+  </body>
+</html>

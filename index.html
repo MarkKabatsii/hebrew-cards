@@ -10,84 +10,69 @@
       href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/cards.css" />
   </head>
-  <body>
-    <nav class="nav">
-      <div class="logo">
-        <span class="logo-mark" lang="he">א</span>
-        <span>Іврит</span>
-      </div>
-      <div class="nav-links">
-        <a href="index.html" aria-current="page">Картки</a>
-        <a href="add.html">Додати слова</a>
-        <a href="#">Колоди</a>
-        <a href="#">Прогрес</a>
-      </div>
-      <button class="btn-text" id="signout">Вийти</button>
-    </nav>
+  <body data-root="" data-page="study">
+    <nav id="nav"></nav>
 
     <main class="main">
       <header class="hero">
         <h1>Вчіть слова. Без поспіху.</h1>
-        <p>Одна картка за раз: слово, звучання, переклад.</p>
+        <p>Торкніться картки, щоб побачити переклад.</p>
       </header>
 
-      <div class="chips" id="chips" role="group" aria-label="Колоди"></div>
+      <div class="filters" id="filters"></div>
 
       <div class="stack" id="study">
         <div class="progress">
           <div class="progress-meta">
-            <span id="position"></span>
-            <span id="deckName"></span>
+            <span id="position"></span><span id="scope"></span>
           </div>
           <div class="progress-track">
             <div class="progress-bar" id="bar"></div>
           </div>
         </div>
 
-        <section class="card is-hidden" id="card" aria-live="polite">
-          <div class="card-he" id="word" lang="he" dir="rtl"></div>
-          <div class="card-answer">
-            <div class="card-translit" id="translit"></div>
-            <div class="card-meaning" id="meaning"></div>
+        <button
+          class="flip-scene"
+          id="scene"
+          aria-label="Перегорнути картку"
+          aria-pressed="false"
+        >
+          <div class="flip" id="flip">
+            <div class="face face-front">
+              <div class="card-he" id="word" lang="he" dir="rtl"></div>
+              <div class="card-hint">Торкніться, щоб побачити переклад</div>
+            </div>
+            <div class="face face-back">
+              <div class="card-translit" id="translit"></div>
+              <div class="card-meaning" id="meaning"></div>
+            </div>
           </div>
-          <div class="card-hint">Спробуйте згадати переклад</div>
-        </section>
+        </button>
 
-        <button class="btn-primary" id="reveal">Показати переклад</button>
-
-        <div class="ratings" id="ratings" hidden>
-          <button class="rating">
-            <span class="rating-label">Ще раз</span
-            ><span class="rating-hint">&lt; 1 хв</span>
-          </button>
-          <button class="rating">
-            <span class="rating-label">Складно</span
-            ><span class="rating-hint">10 хв</span>
-          </button>
-          <button class="rating">
-            <span class="rating-label">Добре</span
-            ><span class="rating-hint">1 день</span>
-          </button>
-          <button class="rating">
-            <span class="rating-label">Легко</span
-            ><span class="rating-hint">4 дні</span>
-          </button>
+        <div class="card-nav">
+          <button class="btn-secondary" id="prev">‹ Попередня</button>
+          <button class="btn-primary" id="next">Наступна ›</button>
         </div>
       </div>
 
       <section class="empty" id="empty" hidden>
-        <h2>У цій колоді ще немає слів</h2>
-        <p>Додайте перше слово, і воно з'явиться тут.</p>
-        <a class="btn-primary" href="add.html">Додати слово</a>
+        <h2>У цьому розділі ще немає слів</h2>
+        <p>Додайте слова по одному або імпортуйте список.</p>
+        <div class="row">
+          <a class="btn-primary" href="pages/add.html">Додати слово</a>
+          <a class="btn-secondary" href="pages/import.html">Імпорт списком</a>
+        </div>
       </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="config.js"></script>
-    <script src="words.js"></script>
-    <script src="store.js"></script>
-    <script src="study.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/taxonomy.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/study.js"></script>
   </body>
 </html>

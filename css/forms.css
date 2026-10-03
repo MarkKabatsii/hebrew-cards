@@ -1,0 +1,156 @@
+/* Панелі та форми: додавання, імпорт, вхід */
+.panel {
+  width: min(640px, 100%);
+  padding: 32px;
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow-panel);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.panel h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.field input,
+.field select,
+.field textarea {
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: var(--fill);
+  font: inherit;
+  font-size: 17px;
+  color: var(--text);
+}
+.field select {
+  padding-right: 12px;
+}
+.field textarea {
+  padding: 12px 16px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 200px;
+  font-size: 16px;
+}
+.field .input-he {
+  font-family: var(--font-he);
+  font-size: 28px;
+  font-weight: 500;
+}
+.panel .btn-primary {
+  align-self: flex-start;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.msg {
+  margin: 0;
+  min-height: 1.4em;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.msg.is-error {
+  color: var(--bad);
+}
+.msg.is-ok {
+  color: var(--ok);
+}
+.muted {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+.muted a {
+  color: var(--accent);
+}
+code {
+  font-size: 0.9em;
+  background: var(--fill);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+details {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+details summary {
+  cursor: pointer;
+  color: var(--accent);
+}
+details pre {
+  margin: 8px 0 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--fill);
+  color: var(--text);
+  font:
+    13px/1.5 ui-monospace,
+    Menlo,
+    Consolas,
+    monospace;
+  overflow-x: auto;
+}
+.report {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--bad);
+  line-height: 1.6;
+}
+
+.word-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 360px;
+  overflow-y: auto;
+}
+.word-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--fill);
+}
+.word-he {
+  font-family: var(--font-he);
+  font-weight: 700;
+  font-size: 28px;
+  min-width: 96px;
+}
+.word-text {
+  flex-grow: 1;
+  font-size: 15px;
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding: 20px;
+  }
+  .panel .btn-primary {
+    align-self: stretch;
+  }
+  .word-row {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .word-he {
+    min-width: 72px;
+  }
+}
