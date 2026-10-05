@@ -4,33 +4,43 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Квіз — Іврит</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/cards.css" />
   </head>
+
   <body data-root="../" data-page="quiz">
     <nav id="nav"></nav>
 
     <main class="main">
-      <header class="hero"><h1>Оберіть переклад.</h1></header>
+      <header class="hero">
+        <h1>Оберіть переклад.</h1>
+      </header>
 
       <div class="filters" id="filters"></div>
 
       <section class="stack" id="quiz">
         <div class="score-row">
           <div class="score">
-            <span class="pill pill-ok">Правильно · <span id="ok">0</span></span>
-            <span class="pill pill-bad"
-              >До повторення · <span id="review">0</span></span
-            >
+            <span class="pill pill-ok">
+              Правильно · <span id="ok">0</span>
+            </span>
+
+            <span class="pill pill-bad">
+              До повторення · <span id="review">0</span>
+            </span>
           </div>
+
           <span class="meta" id="position"></span>
         </div>
+
         <div class="progress-track">
           <div class="progress-bar" id="bar"></div>
         </div>
@@ -40,14 +50,17 @@
             <div class="face face-front">
               <div class="card-he" id="word" lang="he" dir="rtl"></div>
             </div>
+
             <div class="face face-back">
               <div class="card-translit" id="translit"></div>
+
               <div class="card-meaning" id="meaning"></div>
             </div>
           </div>
         </div>
 
         <div class="options" id="options"></div>
+
         <div class="next-slot">
           <button class="btn-primary" id="next" hidden>Далі ›</button>
         </div>
@@ -55,19 +68,27 @@
 
       <section class="empty" id="result" hidden>
         <h2>Готово!</h2>
-        <p>Правильних відповідей: <strong id="score"></strong></p>
+
+        <p>
+          Правильних відповідей:
+          <strong id="score"></strong>
+        </p>
+
         <div class="row">
           <button class="btn-primary" id="again">Ще раз</button>
-          <a class="btn-secondary" href="../index.html">До карток</a>
+
+          <a class="btn-secondary" href="../index.html"> До карток </a>
         </div>
       </section>
 
       <section class="empty" id="empty" hidden>
         <h2>У цьому розділі ще немає слів</h2>
         <p>Додайте слова, щоб почати квіз.</p>
+
         <div class="row">
-          <a class="btn-primary" href="add.html">Додати слово</a>
-          <a class="btn-secondary" href="import.html">Імпорт списком</a>
+          <a class="btn-primary" href="add.html"> Додати слово </a>
+
+          <a class="btn-secondary" href="import.html"> Імпорт списком </a>
         </div>
       </section>
     </main>
@@ -75,6 +96,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="../js/config.js"></script>
     <script src="../js/taxonomy.js"></script>
+    <script src="../js/scheduler.js"></script>
     <script src="../js/store.js"></script>
     <script src="../js/ui.js"></script>
     <script src="../js/quiz.js"></script>

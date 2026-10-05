@@ -9,9 +9,11 @@
   color: inherit;
   perspective: 1400px;
 }
+
 .flip-scene.is-quiz {
   height: 280px;
 }
+
 button.flip-scene {
   cursor: pointer;
 }
@@ -23,6 +25,7 @@ button.flip-scene {
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
 .flip.is-flipped {
   transform: rotateY(180deg);
 }
@@ -43,6 +46,7 @@ button.flip-scene {
   padding: 0 24px;
   text-align: center;
 }
+
 .face-back {
   transform: rotateY(180deg);
   gap: 10px;
@@ -54,26 +58,32 @@ button.flip-scene {
   font-size: clamp(64px, 20vw, 120px);
   line-height: 1.1;
 }
+
 .is-quiz .card-he {
   font-size: clamp(56px, 18vw, 104px);
 }
+
 .card-hint {
   font-size: 15px;
   color: var(--text-2);
 }
+
 .card-translit {
   font-size: 24px;
   color: var(--text-2);
   letter-spacing: 0.02em;
 }
+
 .card-meaning {
   font-size: clamp(32px, 9vw, 52px);
   font-weight: 600;
   letter-spacing: -0.02em;
 }
+
 .is-quiz .card-translit {
   font-size: 22px;
 }
+
 .is-quiz .card-meaning {
   font-size: clamp(28px, 8vw, 44px);
 }
@@ -85,6 +95,60 @@ button.flip-scene {
   gap: 12px;
 }
 
+.rating-panel {
+  width: min(640px, 100%);
+}
+
+.rating-hint {
+  margin: 0 0 10px;
+  color: var(--text-2);
+  font-size: 14px;
+  text-align: center;
+}
+
+.rating-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.rating {
+  min-height: 64px;
+  padding: 8px;
+  border: 1px solid #dcdce1;
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    transform 0.2s;
+}
+
+.rating:hover:not(:disabled) {
+  border-color: var(--text-2);
+  background: var(--fill);
+  transform: translateY(-1px);
+}
+
+.rating span {
+  color: var(--text-2);
+  font-size: 12px;
+}
+
+.rating-again strong {
+  color: var(--bad);
+}
+
+.rating-easy strong {
+  color: var(--ok);
+}
+
 /* Квіз */
 .score-row {
   width: min(640px, 100%);
@@ -94,11 +158,13 @@ button.flip-scene {
   gap: 8px;
   flex-wrap: wrap;
 }
+
 .score {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
+
 .pill {
   height: 36px;
   padding: 0 16px;
@@ -108,14 +174,17 @@ button.flip-scene {
   display: inline-flex;
   align-items: center;
 }
+
 .pill-ok {
   background: #e3f5ea;
   color: var(--ok);
 }
+
 .pill-bad {
   background: #fde8e6;
   color: var(--bad);
 }
+
 .meta {
   font-size: 14px;
   color: var(--text-2);
@@ -127,6 +196,7 @@ button.flip-scene {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
+
 .option {
   height: 64px;
   padding: 0 16px;
@@ -139,23 +209,29 @@ button.flip-scene {
     background 0.2s,
     opacity 0.2s;
 }
+
 .option:not(:disabled):hover {
   background: #dcdce1;
 }
+
 .option:disabled {
   cursor: default;
 }
+
 .option.is-correct {
   background: var(--ok);
   color: #fff;
 }
+
 .option.is-wrong {
   background: var(--bad);
   color: #fff;
 }
+
 .option.is-dim {
   opacity: 0.45;
 }
+
 .next-slot {
   height: 52px;
   display: flex;
@@ -172,16 +248,23 @@ button.flip-scene {
   .flip-scene {
     height: 320px;
   }
+
   .flip-scene.is-quiz {
     height: 260px;
   }
+
   .card-nav .btn-primary,
   .card-nav .btn-secondary {
     flex: 1;
     padding: 0 16px;
   }
+
   .option {
     font-size: 17px;
     height: 60px;
+  }
+
+  .rating-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

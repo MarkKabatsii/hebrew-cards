@@ -4,22 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Картки для вивчення івриту</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/cards.css" />
   </head>
+
   <body data-root="" data-page="study">
     <nav id="nav"></nav>
 
     <main class="main">
       <header class="hero">
         <h1>Вчіть слова. Без поспіху.</h1>
-        <p>Торкніться картки, щоб побачити переклад.</p>
+        <p>Пригадайте переклад, відкрийте картку й оцініть відповідь.</p>
       </header>
 
       <div class="filters" id="filters"></div>
@@ -27,8 +30,10 @@
       <div class="stack" id="study">
         <div class="progress">
           <div class="progress-meta">
-            <span id="position"></span><span id="scope"></span>
+            <span id="position"></span>
+            <span id="scope"></span>
           </div>
+
           <div class="progress-track">
             <div class="progress-bar" id="bar"></div>
           </div>
@@ -45,6 +50,7 @@
               <div class="card-he" id="word" lang="he" dir="rtl"></div>
               <div class="card-hint">Торкніться, щоб побачити переклад</div>
             </div>
+
             <div class="face face-back">
               <div class="card-translit" id="translit"></div>
               <div class="card-meaning" id="meaning"></div>
@@ -52,18 +58,40 @@
           </div>
         </button>
 
-        <div class="card-nav">
-          <button class="btn-secondary" id="prev">‹ Попередня</button>
-          <button class="btn-primary" id="next">Наступна ›</button>
+        <div class="rating-panel" id="ratings" hidden>
+          <p class="rating-hint">Наскільки легко ви пригадали слово?</p>
+
+          <div class="rating-actions">
+            <button class="rating rating-again" data-rating="again">
+              <strong>Ще раз</strong>
+              <span id="again-time"></span>
+            </button>
+
+            <button class="rating" data-rating="hard">
+              <strong>Важко</strong>
+              <span id="hard-time"></span>
+            </button>
+
+            <button class="rating" data-rating="good">
+              <strong>Добре</strong>
+              <span id="good-time"></span>
+            </button>
+
+            <button class="rating rating-easy" data-rating="easy">
+              <strong>Легко</strong>
+              <span id="easy-time"></span>
+            </button>
+          </div>
         </div>
       </div>
 
       <section class="empty" id="empty" hidden>
         <h2>У цьому розділі ще немає слів</h2>
         <p>Додайте слова по одному або імпортуйте список.</p>
+
         <div class="row">
           <a class="btn-primary" href="pages/add.html">Додати слово</a>
-          <a class="btn-secondary" href="pages/import.html">Імпорт списком</a>
+          <a class="btn-secondary" href="pages/import.html"> Імпорт списком </a>
         </div>
       </section>
     </main>
@@ -71,6 +99,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/config.js"></script>
     <script src="js/taxonomy.js"></script>
+    <script src="js/scheduler.js"></script>
     <script src="js/store.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/study.js"></script>
