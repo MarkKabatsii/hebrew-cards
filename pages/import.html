@@ -49,12 +49,18 @@
           <p>
             Одне слово в рядку: <code>іврит;транскрипція;переклад</code>.
             Роздільник: <code>;</code>, <code>|</code> або Tab (так вставляється
-            з Excel чи Google Таблиць). Необов'язково четверта й п'ята колонки:
+            з Excel чи Google Таблиць), або кома для CSV. Необов'язково четверта й п'ята колонки:
             категорія та розділ.
+          </p>
+          <p>
+            Якщо поле містить роздільник, візьміть його у подвійні лапки.
+            Лапки всередині такого поля подвоюються. CSV може містити заголовки
+            <code>he,tr,ua,deck,section</code> або їхні українські назви.
+            Рядки з помилками потрібно виправити до імпорту.
           </p>
           <pre>
 אֲנִי;ані;я
-הוּא;hу;він;Загальновживані слова;Займенники
+הוּא;гу;він;Загальновживані слова;Займенники
 חַשְׁמַל;хашмаль;електрика;Електрика</pre
           >
           <p>
@@ -63,6 +69,17 @@
             можна додати <code>deck</code> і <code>section</code>.
           </p>
         </details>
+
+        <label class="field">
+          <span>Роздільник текстового списку</span>
+          <select id="delimiter">
+            <option value="auto">Визначити автоматично</option>
+            <option value=";">Крапка з комою (;)</option>
+            <option value=",">Кома (,)</option>
+            <option value="&#9;">Табуляція (Tab)</option>
+            <option value="|">Вертикальна риска (|)</option>
+          </select>
+        </label>
 
         <label class="field"
           ><span>Або файл (.txt, .csv, .json)</span>
@@ -78,6 +95,9 @@
           </button>
         </div>
         <p class="msg" id="msg" role="status"></p>
+        <button class="btn-secondary" id="reloadWords" type="button" hidden>
+          Повторити завантаження слів
+        </button>
         <ul class="report" id="report"></ul>
       </section>
     </main>

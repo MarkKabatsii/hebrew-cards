@@ -2,6 +2,14 @@
 const form = $('form'),
   msg = $('msg')
 let words = []
+let ready = false
+let saving = false
+
+function syncControls() {
+  form.querySelectorAll('input, select, button').forEach((control) => {
+    control.disabled = saving || !ready
+  })
+}
 
 const scope = UI.bindScope(
   $('category'),
@@ -49,42 +57,54 @@ function renderList() {
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault()
+  if (saving || !ready) return
   const sc = scope.value()
-  const word = {
+  const { word, errors } = validateWord({
     deck: sc.deck,
     section: sc.section,
     he: $('he').value.trim(),
     tr: $('tr').value.trim(),
     ua: $('ua').value.trim(),
-  }
+  }, sc)
 
-  if (!word.he || !word.tr || !word.ua)
-    return say('Заповніть усі поля.', 'error')
-  if (!HEBREW.test(word.he))
-    return say('У полі «Іврит» потрібні івритські літери.', 'error')
-  if (words.some((w) => wordKey(w) === wordKey(word)))
-    return say('Таке слово вже є в цьому розділі.', 'error')
+  if (errors.length) return say(errors.join('. '), 'error')
 
+  saving = true
+  syncControls()
   try {
-    await Store.add(word)
     words = await Store.all()
+    if (words.some((w) => wordKey(w) === wordKey(word))) {
+      renderList()
+      return say('Таке слово вже є в цьому розділі.', 'error')
+    }
+    const added = await Store.add(word)
+    words.push(added)
     say('Слово «' + word.ua + '» додано.', 'ok')
     ;['he', 'tr', 'ua'].forEach((id) => {
       $(id).value = ''
     })
-    $('he').focus()
     renderList()
   } catch (err) {
-    say('Не вдалося зберегти: ' + err.message, 'error')
+    say(err.code === '23505'
+      ? 'Таке слово вже додано. Оновіть список.'
+      : 'Не вдалося підтвердити додавання: ' + err.message, 'error')
+  } finally {
+    saving = false
+    syncControls()
+    $('he').focus()
   }
 })
 
+syncControls()
 ;(async () => {
   try {
     if (!(await Store.requireUser())) return
     words = await Store.all()
+    ready = true
     renderList()
   } catch (e) {
-    say(e.message, 'error')
+    say('Не вдалося завантажити слова. Оновіть сторінку. ' + e.message, 'error')
+  } finally {
+    syncControls()
   }
 })()

@@ -48,19 +48,31 @@ const Store = {
   },
 
   async add(word) {
-    const { error } = await db.from('words').insert(word)
+    const { data, error } = await db.from('words').insert(word).select('*').single()
 
     if (error) throw error
+    if (!data) throw new Error('Сервер не підтвердив додавання картки. Оновіть список.')
+    return data
   },
 
   async addMany(rows) {
+    let addedCount = 0
     for (let index = 0; index < rows.length; index += 200) {
-      const { error } = await db
-        .from('words')
-        .insert(rows.slice(index, index + 200))
-
-      if (error) throw error
+      const batch = rows.slice(index, index + 200)
+      try {
+        const { data, error } = await db.from('words').insert(batch).select('id')
+        if (error) throw error
+        if (!Array.isArray(data) || data.length !== batch.length) {
+          throw new Error('Сервер не підтвердив весь блок. Перевірте список перед повтором.')
+        }
+        addedCount += data.length
+      } catch (error) {
+        const failure = new Error(error.message || 'Не вдалося записати блок карток.')
+        failure.addedCount = addedCount
+        throw failure
+      }
     }
+    return { addedCount }
   },
 
   async remove(id) {
