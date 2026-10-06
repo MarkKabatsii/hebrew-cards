@@ -2,6 +2,8 @@
 
 Картки для вивчення івриту: слово, транскрипція, переклад. Frontend: HTML/CSS/JS. База даних і вхід: Supabase. Хостинг: Netlify.
 
+[Відкрити сайт](https://learnhebrewapp.netlify.app/pages/login.html)
+
 ## Структура
 
 ```text

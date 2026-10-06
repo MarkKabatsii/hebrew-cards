@@ -13,7 +13,10 @@ const CATEGORIES = [
   },
   { name: 'Електрика', he: 'חשמל', sections: [] },
   { name: 'Юриспруденція', he: 'משפט', sections: [] },
+  { name: 'Майстерня', he: 'סדנה', sections: ['Інструменти механіка'] },
   { name: 'Інше', he: 'אחר', sections: [] },
 ]
 
 const findCategory = (name) => CATEGORIES.find((c) => c.name === name)
+
+//some text
