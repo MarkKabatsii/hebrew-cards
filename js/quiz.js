@@ -11,8 +11,29 @@ let ok = 0
 let review = 0
 let picked = null
 let flipped = false
+let saving = false
+let transitioning = false
+let answerSaved = false
+let session = 0
+let transitionTimer = null
 
 const flip = $('flip')
+const status = $('quiz-status')
+
+function say(text, error = false) {
+  status.textContent = text
+  status.classList.toggle('is-error', error)
+}
+
+function syncControls() {
+  const busy = saving || transitioning
+  UI.setFiltersDisabled($('filters'), busy)
+  Array.from($('options').children).forEach((button) => {
+    button.disabled = busy || picked !== null
+  })
+  $('next').disabled = busy || !answerSaved
+  $('retry-save').disabled = busy
+}
 
 const shuffle = (items) => {
   const result = items.slice()
@@ -57,7 +78,7 @@ function updateScore() {
   $('review').textContent = review
 
   $('bar').style.width =
-    ((i + (picked !== null ? 1 : 0)) / Math.max(order.length, 1)) * 100 + '%'
+    ((i + (answerSaved ? 1 : 0)) / Math.max(order.length, 1)) * 100 + '%'
 }
 
 function render() {
@@ -91,6 +112,8 @@ function render() {
   $('meaning').textContent = word.ua
   $('position').textContent = 'Питання ' + (i + 1) + ' з ' + order.length
   $('next').hidden = true
+  $('retry-save').hidden = true
+  say('')
 
   const options = $('options')
   options.textContent = ''
@@ -102,10 +125,11 @@ function render() {
   })
 
   updateScore()
+  syncControls()
 }
 
 function choose(index) {
-  if (picked !== null) return
+  if (picked !== null || saving || transitioning || !current) return
 
   picked = index
   const right = current.options[index].id === current.word.id
@@ -120,26 +144,60 @@ function choose(index) {
     }
   })
 
-  if (right) {
-    ok++
-    Store.rateWord(current.word, 'good').catch(() => {})
-  } else {
-    review++
-    setFlipped(true)
-    Store.rateWord(current.word, 'again').catch(() => {})
-  }
+  if (!right) setFlipped(true)
+  return saveAnswer()
+}
 
-  $('next').hidden = false
-  updateScore()
+async function saveAnswer() {
+  if (saving || transitioning || answerSaved || picked === null || !current) return
+
+  const activeSession = session
+  const question = current
+  const right = question.options[picked].id === question.word.id
+  saving = true
+  $('retry-save').hidden = true
+  say('Зберігаємо результат…')
+  syncControls()
+
+  try {
+    await Store.rateWord(question.word, right ? 'good' : 'again')
+    if (activeSession !== session || question !== current) return
+
+    answerSaved = true
+    if (right) ok++
+    else review++
+
+    say('Результат збережено.')
+    $('next').hidden = false
+    updateScore()
+  } catch (error) {
+    if (activeSession === session && question === current) {
+      say('Не вдалося зберегти результат. ' + error.message, true)
+      $('retry-save').hidden = false
+    }
+  } finally {
+    saving = false
+    syncControls()
+  }
 }
 
 function advance() {
   i++
   picked = null
+  answerSaved = false
   render()
 }
 
 function start() {
+  session++
+  clearTimeout(transitionTimer)
+  transitionTimer = null
+  transitioning = false
+  current = null
+  answerSaved = false
+  $('next').hidden = true
+  $('retry-save').hidden = true
+  say('')
   pool = UI.inScope(words, state)
   order = shuffle(pool)
 
@@ -150,19 +208,31 @@ function start() {
 
   setFlipped(false)
   render()
+  syncControls()
 }
 
 $('next').addEventListener('click', () => {
+  if (saving || transitioning || !answerSaved) return
   $('next').hidden = true
 
   if (flipped) {
     setFlipped(false)
-    setTimeout(advance, 300)
+    const activeSession = session
+    transitioning = true
+    syncControls()
+    transitionTimer = setTimeout(() => {
+      if (activeSession !== session) return
+      transitionTimer = null
+      transitioning = false
+      advance()
+      syncControls()
+    }, 300)
   } else {
     advance()
   }
 })
 
+$('retry-save').addEventListener('click', saveAnswer)
 $('again').addEventListener('click', start)
 ;(async () => {
   try {

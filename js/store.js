@@ -48,19 +48,31 @@ const Store = {
   },
 
   async add(word) {
-    const { error } = await db.from('words').insert(word)
+    const { data, error } = await db.from('words').insert(word).select('*').single()
 
     if (error) throw error
+    if (!data) throw new Error('Сервер не підтвердив додавання картки. Оновіть список.')
+    return data
   },
 
   async addMany(rows) {
+    let addedCount = 0
     for (let index = 0; index < rows.length; index += 200) {
-      const { error } = await db
-        .from('words')
-        .insert(rows.slice(index, index + 200))
-
-      if (error) throw error
+      const batch = rows.slice(index, index + 200)
+      try {
+        const { data, error } = await db.from('words').insert(batch).select('id')
+        if (error) throw error
+        if (!Array.isArray(data) || data.length !== batch.length) {
+          throw new Error('Сервер не підтвердив весь блок. Перевірте список перед повтором.')
+        }
+        addedCount += data.length
+      } catch (error) {
+        const failure = new Error(error.message || 'Не вдалося записати блок карток.')
+        failure.addedCount = addedCount
+        throw failure
+      }
     }
+    return { addedCount }
   },
 
   async remove(id) {
@@ -81,12 +93,37 @@ const Store = {
   async rateWord(word, rating) {
     const changes = Scheduler.result(word, rating)
 
-    const { error } = await db.from('words').update(changes).eq('id', word.id)
+    // Записуємо лише якщо прогрес не змінила інша вкладка/пристрій.
+    let query = db
+      .from('words')
+      .update(changes)
+      .eq('id', word.id)
+      .eq('review_level', word.review_level ?? 0)
+      .eq('correct_streak', word.correct_streak ?? 0)
+      .eq('lapses', word.lapses ?? 0)
 
-    if (error) throw error
+    query = word.last_reviewed_at == null
+      ? query.is('last_reviewed_at', null)
+      : query.eq('last_reviewed_at', word.last_reviewed_at)
 
-    Object.assign(word, changes)
-    return changes
+    const { data, error } = await query
+      .select(
+        'id, review_level, due_at, last_reviewed_at, correct_streak, lapses, needs_review',
+      )
+      .single()
+
+    if (error) {
+      if (error.code === 'PGRST116') {
+        throw new Error('Картку вже змінено, видалено або вона недоступна. Оновіть сторінку.')
+      }
+      throw error
+    }
+    if (!data || data.id !== word.id) {
+      throw new Error('Картку не знайдено або вона більше недоступна. Оновіть сторінку.')
+    }
+
+    Object.assign(word, data)
+    return data
   },
 
   async signOut() {

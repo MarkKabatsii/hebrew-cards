@@ -1,7 +1,8 @@
-// Масовий імпорт слів: вставте список або завантажте файл (.txt, .csv, .json).
+// Імпорт блоками: перед кожною спробою перевіряємо актуальну базу.
 const msg = $('msg')
 let existing = []
-
+let ready = false
+let busy = false
 const scope = UI.bindScope($('category'), $('section'), $('sectionWrap'))
 
 function say(text, kind) {
@@ -9,84 +10,116 @@ function say(text, kind) {
   msg.className = 'msg' + (kind ? ' is-' + kind : '')
 }
 
+function syncControls() {
+  for (const id of ['check', 'doImport', 'file', 'text', 'category', 'section', 'delimiter']) {
+    $(id).disabled = busy || !ready
+  }
+  $('reloadWords').disabled = busy
+}
+
 function showErrors(errors) {
   const ul = $('report')
   ul.textContent = ''
-  errors.slice(0, 20).forEach((t) => ul.appendChild(el('li', null, t)))
-  if (errors.length > 20)
-    ul.appendChild(el('li', null, '…і ще ' + (errors.length - 20)))
+  errors.slice(0, 20).forEach(text => ul.appendChild(el('li', null, text)))
+  if (errors.length > 20) ul.appendChild(el('li', null, '…і ще ' + (errors.length - 20)))
 }
 
-// dryRun = true лише перевіряє, нічого не записуючи
-async function run(dryRun) {
-  const text = $('text').value
-  if (!text.trim())
-    return say('Вставте список слів або виберіть файл.', 'error')
-
-  const { rows, errors } = parseWords(text, scope.value())
-  const have = new Set(existing.map(wordKey))
-  const fresh = []
-  let dup = 0
-  for (const r of rows) {
-    const k = wordKey(r)
-    if (have.has(k)) {
-      dup++
-      continue
-    }
-    have.add(k)
-    fresh.push(r)
-  }
-  showErrors(errors)
-
-  const summary =
-    'Нових: ' +
-    fresh.length +
-    ', дублікатів: ' +
-    dup +
-    ', помилок: ' +
-    errors.length +
-    '.'
-  if (dryRun)
-    return say('Перевірка. ' + summary, errors.length ? 'error' : 'ok')
-  if (!fresh.length) return say('Нічого додавати. ' + summary, 'error')
-
-  $('doImport').disabled = true
+async function loadWords() {
+  if (busy) return
+  busy = true
+  syncControls()
   try {
-    await Store.addMany(fresh)
+    if (!(await Store.requireUser())) return
     existing = await Store.all()
-    say(
-      'Готово. Додано: ' +
-        fresh.length +
-        ', дублікатів пропущено: ' +
-        dup +
-        ', помилок: ' +
-        errors.length +
-        '.',
-      'ok',
-    )
-    if (!errors.length) $('text').value = ''
-  } catch (e) {
-    say('Не вдалося зберегти: ' + e.message, 'error')
+    ready = true
+    $('reloadWords').hidden = true
+    say('Список завантажено. Можна перевіряти та імпортувати слова.')
+  } catch (error) {
+    ready = false
+    $('reloadWords').hidden = false
+    say('Не вдалося завантажити слова: ' + error.message, 'error')
   } finally {
-    $('doImport').disabled = false
+    busy = false
+    syncControls()
+  }
+}
+
+async function run(dryRun) {
+  if (busy || !ready) return
+  const text = $('text').value
+  if (!text.trim()) return say('Вставте список слів або виберіть файл.', 'error')
+  const { rows, errors } = parseWords(text, scope.value(), $('delimiter').value)
+  showErrors(errors)
+  // Не записуємо частину списку, якщо в ньому є помилки валідації.
+  if (errors.length) return say('Виправте помилки перед імпортом. Помилок: ' + errors.length + '.', 'error')
+
+  busy = true
+  syncControls()
+  let addedCount = 0
+  let writing = false
+  let refreshing = false
+  try {
+    existing = await Store.all()
+    const have = new Set(existing.map(wordKey))
+    const fresh = []
+    let duplicates = 0
+    for (const row of rows) {
+      const key = wordKey(row)
+      if (have.has(key)) duplicates++
+      else { have.add(key); fresh.push(row) }
+    }
+    const summary = 'Нових: ' + fresh.length + ', дублікатів: ' + duplicates + '.'
+    if (dryRun) return say('Перевірка. ' + summary, 'ok')
+    if (!fresh.length) return say('Нічого додавати. ' + summary, 'ok')
+
+    writing = true
+    say('Імпортуємо ' + fresh.length + ' карток…')
+    const result = await Store.addMany(fresh)
+    addedCount = result.addedCount
+    writing = false
+    // Підтверджений запис не перетворюємо на «невдачу» через збій читання.
+    existing.push(...fresh)
+    $('text').value = ''
+    refreshing = true
+    existing = await Store.all()
+    refreshing = false
+    say('Готово. Додано: ' + addedCount + ', дублікатів пропущено: ' + duplicates + '.', 'ok')
+  } catch (error) {
+    if (refreshing) {
+      say('Додано: ' + addedCount + '. Не вдалося оновити список: ' + error.message + '. Перед наступним імпортом список буде завантажено повторно.', 'error')
+    } else if (writing) {
+      say('Імпорт зупинено. Підтверджено додавання: ' + (error.addedCount ?? 0) +
+        '. ' + error.message + ' Список залишено: повторний імпорт перевірить базу й пропустить наявні картки.', 'error')
+    } else {
+      say('Не вдалося перевірити актуальний список. Нічого не надсилали на запис. ' + error.message, 'error')
+    }
+  } finally {
+    busy = false
+    syncControls()
   }
 }
 
 $('check').addEventListener('click', () => run(true))
 $('doImport').addEventListener('click', () => run(false))
-$('file').addEventListener('change', async (e) => {
-  const f = e.target.files[0]
-  if (f) {
-    $('text').value = await f.text()
-    say('Файл «' + f.name + '» завантажено. Натисніть «Перевірити».')
+$('reloadWords').addEventListener('click', loadWords)
+$('file').addEventListener('change', async event => {
+  if (busy || !ready) return
+  const file = event.target.files[0]
+  if (!file) return
+  busy = true
+  syncControls()
+  try {
+    const text = await file.text()
+    $('text').value = text
+    showErrors([])
+    say('Файл «' + file.name + '» завантажено. Натисніть «Перевірити».')
+  } catch (error) {
+    say('Не вдалося прочитати файл: ' + error.message, 'error')
+  } finally {
+    busy = false
+    syncControls()
   }
 })
 
-;(async () => {
-  try {
-    if (!(await Store.requireUser())) return
-    existing = await Store.all()
-  } catch (e) {
-    say(e.message, 'error')
-  }
-})()
+syncControls()
+loadWords()

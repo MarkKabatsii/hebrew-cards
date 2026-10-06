@@ -98,6 +98,12 @@ const UI = {
     }
   },
 
+  setFiltersDisabled(box, disabled) {
+    box.querySelectorAll('button').forEach((button) => {
+      button.disabled = disabled
+    })
+  },
+
   // Випадаючі списки «категорія» та «розділ» для форм
   bindScope(catSel, secSel, secWrap, onChange) {
     CATEGORIES.forEach((c) => catSel.append(new Option(c.name, c.name)))

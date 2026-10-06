@@ -6,10 +6,28 @@ let queue = []
 let i = 0
 let flipped = false
 let saving = false
+let transitioning = false
+let session = 0
+let transitionTimer = null
 
 const flip = $('flip')
 const scene = $('scene')
 const ratings = $('ratings')
+const status = $('study-status')
+
+function say(text, error = false) {
+  status.textContent = text
+  status.classList.toggle('is-error', error)
+}
+
+function syncControls() {
+  const busy = saving || transitioning
+  scene.disabled = busy || !queue.length
+  ratings.querySelectorAll('button').forEach((button) => {
+    button.disabled = busy
+  })
+  UI.setFiltersDisabled($('filters'), busy)
+}
 
 function setFlipped(value) {
   flipped = value
@@ -52,20 +70,35 @@ function render() {
 }
 
 function goNext() {
+  const activeSession = session
+  transitioning = true
   setFlipped(false)
-  setTimeout(render, 300)
+  syncControls()
+  transitionTimer = setTimeout(() => {
+    if (activeSession !== session) return
+    transitionTimer = null
+    render()
+    transitioning = false
+    syncControls()
+  }, 300)
 }
 
 function start() {
+  session++
+  clearTimeout(transitionTimer)
+  transitionTimer = null
+  transitioning = false
+  say('')
   queue = UI.inScope(words, state).filter((word) => Scheduler.isDue(word))
 
   i = 0
   setFlipped(false)
   render()
+  syncControls()
 }
 
 scene.addEventListener('click', () => {
-  if (!saving) {
+  if (!saving && !transitioning && queue.length) {
     setFlipped(!flipped)
   }
 })
@@ -73,19 +106,19 @@ scene.addEventListener('click', () => {
 ratings.addEventListener('click', async (event) => {
   const button = event.target.closest('[data-rating]')
 
-  if (!button || saving) return
+  if (!button || saving || transitioning || !flipped || !queue.length) return
 
   saving = true
-
-  ratings.querySelectorAll('button').forEach((item) => {
-    item.disabled = true
-  })
+  syncControls()
+  say('Зберігаємо результат…')
 
   const word = queue[i]
   const rating = button.dataset.rating
+  const activeSession = session
 
   try {
     await Store.rateWord(word, rating)
+    if (activeSession !== session) return
 
     queue.splice(i, 1)
 
@@ -98,15 +131,19 @@ ratings.addEventListener('click', async (event) => {
       i = 0
     }
 
+    say('Результат збережено.')
     goNext()
   } catch (error) {
-    alert('Не вдалося зберегти результат: ' + error.message)
+    if (activeSession === session) {
+      say(
+        'Не вдалося зберегти результат. ' + error.message +
+          ' За помилки з’єднання натисніть оцінку ще раз.',
+        true,
+      )
+    }
   } finally {
     saving = false
-
-    ratings.querySelectorAll('button').forEach((item) => {
-      item.disabled = false
-    })
+    syncControls()
   }
 })
 ;(async () => {
