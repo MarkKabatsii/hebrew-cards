@@ -18,3 +18,5 @@ const CATEGORIES = [
 ]
 
 const findCategory = (name) => CATEGORIES.find((c) => c.name === name)
+
+//some text
