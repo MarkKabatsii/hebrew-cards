@@ -236,6 +236,23 @@ button.flip-scene {
   height: 52px;
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.save-status {
+  width: min(640px, 100%);
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-2);
+  text-align: center;
+}
+
+.save-status:empty {
+  display: none;
+}
+
+.save-status.is-error {
+  color: var(--bad);
 }
 
 @media (prefers-reduced-motion: reduce) {
