@@ -47,14 +47,14 @@
 
         <div class="flip-scene is-quiz" aria-live="polite">
           <div class="flip" id="flip">
-            <div class="face face-front">
+            <div class="face face-front" id="card-front" aria-hidden="false">
               <div class="card-he" id="word" lang="he" dir="rtl"></div>
             </div>
 
-            <div class="face face-back">
-              <div class="card-translit" id="translit"></div>
+            <div class="face face-back" id="card-back" aria-hidden="true" inert>
+              <div class="card-translit" id="translit" lang="uk" dir="ltr"></div>
 
-              <div class="card-meaning" id="meaning"></div>
+              <div class="card-meaning" id="meaning" lang="uk" dir="ltr"></div>
             </div>
           </div>
         </div>

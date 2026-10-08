@@ -26,6 +26,8 @@ class Element {
   append(...items) { this.children.push(...items) }
   appendChild(item) { this.append(item) }
   setAttribute(name, value) { this.attributes[name] = value }
+  contains(item) { return item === this || this.children.some(child => child.contains?.(item)) }
+  focus() {}
   addEventListener(name, handler) { this.events[name] = handler }
   querySelector(selector) { return this.selectors[selector] ||= new Element() }
   querySelectorAll(selector) {
@@ -67,7 +69,7 @@ function harness(page, rateWord = async () => {}) {
   })
   const run = source => vm.runInContext(source, context)
   const load = name => run(fs.readFileSync(path.join(__dirname, '../js', name + '.js'), 'utf8'))
-  load('taxonomy'); load('scheduler'); load('ui'); load(page)
+  load('taxonomy'); load('scheduler'); load('examples'); load('ui'); load(page)
   const rows = [
     { id: 1, deck: 'Майстерня', section: 'Інструменти механіка', he: 'מברג', tr: 'мавреґ', ua: 'викрутка' },
     { id: 2, deck: 'Майстерня', section: 'Інструменти механіка', he: 'פטיש', tr: 'патіш', ua: 'молоток' },
