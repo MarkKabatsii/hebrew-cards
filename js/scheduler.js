@@ -53,9 +53,9 @@ const Scheduler = (() => {
     const days = daysFor(rating, word.review_level)
 
     if (days < 1) return '10 хв'
-    if (days < 2) return '1 день'
+    if (days === 1) return '1 день'
 
-    return Math.round(days) + ' дн.'
+    return days.toLocaleString('uk-UA', { maximumFractionDigits: 2 }) + ' дн.'
   }
 
   return {
