@@ -53,6 +53,8 @@ function harness(page, rateWord = async () => {}) {
   const context = vm.createContext({
     document: {
       body: { dataset: {} },
+      events: {},
+      addEventListener(name, handler) { this.events[name] = handler },
       getElementById: id => id === 'nav' ? null : get(id),
       createElement: tag => new Element(tag),
     },
@@ -85,6 +87,60 @@ function harness(page, rateWord = async () => {}) {
   const switchSection = () => run(`state.category = 'Електрика'; state.section = null; UI.filters($('filters'), state, start); start()`)
   return { run, get, rows, flush, rate, choose, switchSection, timers }
 }
+
+function freezeTime(h) {
+  h.run(`
+    const NativeDate = Date
+    let fakeNow = NativeDate.parse('2026-10-08T10:00:00Z')
+    Date = class extends NativeDate {
+      constructor(...args) { super(...(args.length ? args : [fakeNow])) }
+      static now() { return fakeNow }
+    }
+  `)
+}
+
+test('empty study shows next review and automatically restores cards when due', () => {
+  const h = harness('study')
+  freezeTime(h)
+  h.run(`words.forEach(word => word.due_at = new Date(Date.now() + 86400000).toISOString()); start()`)
+  assert.equal(h.get('empty').hidden, false)
+  assert.match(h.get('empty').querySelector('p').textContent, /Найближче повторення:/)
+  assert.equal(h.timers.size, 1)
+  h.run('fakeNow += 86400000')
+  h.flush()
+  assert.equal(h.get('empty').hidden, true)
+  assert.equal(h.get('word').textContent, 'מברג')
+})
+
+test('switching section cancels review timer and cannot interrupt an active queue', () => {
+  const h = harness('study')
+  freezeTime(h)
+  h.run(`words.filter(word => word.deck === 'Майстерня').forEach(word => word.due_at = new Date(Date.now() + 86400000).toISOString()); start()`)
+  assert.equal(h.timers.size, 1)
+  h.switchSection()
+  assert.equal(h.timers.size, 0)
+  h.run('fakeNow += 86400000')
+  h.flush()
+  assert.equal(h.get('word').textContent, 'חשמל')
+})
+
+test('returning to an empty background tab checks time without disturbing active study', () => {
+  const h = harness('study')
+  freezeTime(h)
+  h.run(`words.forEach(word => word.due_at = new Date(Date.now() + 86400000).toISOString()); start(); fakeNow += 86400000; document.events.visibilitychange()`)
+  assert.equal(h.get('empty').hidden, true)
+  h.get('scene').events.click()
+  h.run('document.events.visibilitychange()')
+  assert.equal(h.run('flipped'), true)
+})
+
+test('one day means 24 hours; fractional intervals are labelled without rounding to a day', () => {
+  const h = harness('study')
+  freezeTime(h)
+  assert.equal(h.run(`new Date(Scheduler.result({review_level: 0}, 'hard').due_at).getTime() - Date.now()`), 86400000)
+  assert.equal(h.run(`Scheduler.label('hard', {review_level: 2})`), '1,5 дн.')
+  assert.equal(h.run(`Scheduler.label('easy', {review_level: 0})`), '4,5 дн.')
+})
 
 test('study locks ratings, scene and category buttons through save AND transition', async () => {
   const pending = deferred(); const calls = []

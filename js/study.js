@@ -9,6 +9,24 @@ let saving = false
 let transitioning = false
 let session = 0
 let transitionTimer = null
+let dueTimer = null
+
+function scheduleNextReview(scopedWords) {
+  clearTimeout(dueTimer)
+  dueTimer = null
+  const now = Date.now()
+  const dates = scopedWords
+    .map(word => new Date(word.due_at).getTime())
+    .filter(date => Number.isFinite(date) && date > now)
+  if (!dates.length) return null
+  const next = Math.min(...dates)
+  // Обмеження setTimeout: далекі повторення перевіряємо пізніше.
+  dueTimer = setTimeout(() => {
+    dueTimer = null
+    if (!queue.length && !saving && !transitioning) start()
+  }, Math.min(next - now, 2147483647))
+  return new Date(next)
+}
 
 const flip = $('flip')
 const scene = $('scene')
@@ -43,14 +61,20 @@ function render() {
   $('study').hidden = empty
 
   if (empty) {
-    const hasWords = UI.inScope(words, state).length > 0
+    const scopedWords = UI.inScope(words, state)
+    const hasWords = scopedWords.length > 0
+    const nextReview = scheduleNextReview(scopedWords)
 
     $('empty').querySelector('h2').textContent = hasWords
       ? 'На сьогодні все повторено'
       : 'У цьому розділі ще немає слів'
 
     $('empty').querySelector('p').textContent = hasWords
-      ? 'Наступні картки з’являться тут, коли настане час повторення.'
+      ? nextReview
+        ? 'Найближче повторення: ' + nextReview.toLocaleString('uk-UA', {
+            day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit',
+          }) + '. «1 день» — це 24 години від оцінювання. Картки з’являться автоматично.'
+        : 'Наступні картки з’являться тут, коли настане час повторення.'
       : 'Додайте слова по одному або імпортуйте список.'
 
     return
@@ -86,6 +110,8 @@ function goNext() {
 function start() {
   session++
   clearTimeout(transitionTimer)
+  clearTimeout(dueTimer)
+  dueTimer = null
   transitionTimer = null
   transitioning = false
   say('')
@@ -145,6 +171,10 @@ ratings.addEventListener('click', async (event) => {
     saving = false
     syncControls()
   }
+})
+// Браузер може призупиняти таймери у фоновій вкладці.
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden && !queue.length && !saving && !transitioning) start()
 })
 ;(async () => {
   try {
