@@ -41,6 +41,7 @@ function say(text, error = false) {
 function syncControls() {
   const busy = saving || transitioning
   scene.disabled = busy || !queue.length
+  $('close-card').disabled = busy || !queue.length
   ratings.querySelectorAll('button').forEach((button) => {
     button.disabled = busy
   })
@@ -50,6 +51,7 @@ function syncControls() {
 function setFlipped(value) {
   flipped = value
   flip.classList.toggle('is-flipped', value)
+  UI.setCardFlipped(value)
   scene.setAttribute('aria-pressed', String(value))
   ratings.hidden = !value
 }
@@ -85,6 +87,7 @@ function render() {
   $('word').textContent = card.he
   $('translit').textContent = '[ ' + card.tr + ' ]'
   $('meaning').textContent = card.ua
+  WordExamples.render($('examples'), card.examples)
   $('position').textContent = 'Картка ' + (i + 1) + ' з ' + queue.length
   $('scope').textContent = state.section || state.category
   $('bar').style.width = ((i + 1) / queue.length) * 100 + '%'
@@ -127,6 +130,9 @@ scene.addEventListener('click', () => {
   if (!saving && !transitioning && queue.length) {
     setFlipped(!flipped)
   }
+})
+$('close-card').addEventListener('click', () => {
+  if (!saving && !transitioning) setFlipped(false)
 })
 
 ratings.addEventListener('click', async (event) => {
@@ -180,7 +186,10 @@ document.addEventListener('visibilitychange', () => {
   try {
     if (!(await Store.requireUser())) return
 
-    words = await Store.all()
+    const loaded = await Store.withExamples()
+    words = loaded.words
+    $('examples-status').textContent = loaded.examplesUnavailable
+      ? 'Приклади тимчасово недоступні. Можна продовжувати навчання.' : ''
     UI.filters($('filters'), state, start)
     start()
   } catch (error) {

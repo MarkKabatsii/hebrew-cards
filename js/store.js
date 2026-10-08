@@ -47,6 +47,37 @@ const Store = {
     }
   },
 
+  async withExamples() {
+    const words = await this.all()
+    const byWord = new Map(words.map(word => [String(word.id), []]))
+    try {
+      // Невеликі пакети ID не створюють надмірно довгий URL.
+      for (let index = 0; index < words.length; index += 200) {
+        const ids = words.slice(index, index + 200).map(word => word.id)
+        for (let from = 0; ; from += PAGE_SIZE) {
+          const { data, error } = await db.from('word_examples')
+            .select('word_id, example_order, sentence_he, transcription_uk, translation_uk, status')
+            .in('word_id', ids)
+            .eq('status', 'approved')
+            .order('word_id').order('example_order')
+            .range(from, from + PAGE_SIZE - 1)
+          if (error || !Array.isArray(data)) throw new Error('Examples unavailable')
+          for (const row of data) {
+            if (row && byWord.has(String(row.word_id))) byWord.get(String(row.word_id)).push(row)
+          }
+          if (data.length < PAGE_SIZE) break
+        }
+      }
+      return {
+        words: words.map(word => ({ ...word, examples: WordExamples.approved(byWord.get(String(word.id))) })),
+        examplesUnavailable: false,
+      }
+    } catch {
+      // Не виводимо повідомлення сервера, SQL чи дані чужих карток.
+      return { words: words.map(word => ({ ...word, examples: [] })), examplesUnavailable: true }
+    }
+  },
+
   async add(word) {
     const { data, error } = await db.from('words').insert(word).select('*').single()
 

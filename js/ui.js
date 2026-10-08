@@ -104,6 +104,17 @@ const UI = {
     })
   },
 
+  setCardFlipped(value) {
+    const front = $('card-front'), back = $('card-back')
+    const leaving = value ? front : back
+    const moveFocus = leaving.contains(document.activeElement)
+    front.inert = value
+    back.inert = !value
+    front.setAttribute('aria-hidden', String(value))
+    back.setAttribute('aria-hidden', String(!value))
+    if (moveFocus) (value ? $('close-card') : $('scene'))?.focus()
+  },
+
   // Випадаючі списки «категорія» та «розділ» для форм
   bindScope(catSel, secSel, secWrap, onChange) {
     CATEGORIES.forEach((c) => catSel.append(new Option(c.name, c.name)))

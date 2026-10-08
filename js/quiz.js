@@ -49,6 +49,7 @@ const shuffle = (items) => {
 function setFlipped(value) {
   flipped = value
   flip.classList.toggle('is-flipped', value)
+  UI.setCardFlipped(value)
 }
 
 function distractors(word) {
