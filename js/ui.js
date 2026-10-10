@@ -15,6 +15,7 @@ const UI = {
     const pages = [
       ['study', 'Картки', 'index.html'],
       ['quiz', 'Квіз', 'pages/quiz.html'],
+      ['learning', 'Маршрут', 'learning.html'],
       ['decks', 'Колоди', 'pages/decks.html'],
       ['add', 'Додати', 'pages/add.html'],
     ]
@@ -112,7 +113,7 @@ const UI = {
     back.inert = !value
     front.setAttribute('aria-hidden', String(value))
     back.setAttribute('aria-hidden', String(!value))
-    if (moveFocus) (value ? $('close-card') : $('scene'))?.focus()
+    if (moveFocus) (value ? back : $('scene'))?.focus()
   },
 
   // Випадаючі списки «категорія» та «розділ» для форм

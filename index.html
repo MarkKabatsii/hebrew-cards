@@ -50,11 +50,12 @@
               </button>
             </div>
 
-            <div class="face face-back" id="card-back" aria-hidden="true" inert>
+            <div class="face face-back" id="card-back" tabindex="0" role="group"
+              aria-label="Зворот картки. Натисніть Enter або пробіл, щоб повернути до слова"
+              aria-hidden="true" inert>
               <div class="card-translit" id="translit" lang="uk" dir="ltr"></div>
               <div class="card-meaning" id="meaning" lang="uk" dir="ltr"></div>
               <section class="examples" id="examples" hidden></section>
-              <button class="btn-text" id="close-card" type="button">Повернути до слова</button>
             </div>
           </div>
         </div>

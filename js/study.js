@@ -41,7 +41,6 @@ function say(text, error = false) {
 function syncControls() {
   const busy = saving || transitioning
   scene.disabled = busy || !queue.length
-  $('close-card').disabled = busy || !queue.length
   ratings.querySelectorAll('button').forEach((button) => {
     button.disabled = busy
   })
@@ -131,8 +130,15 @@ scene.addEventListener('click', () => {
     setFlipped(!flipped)
   }
 })
-$('close-card').addEventListener('click', () => {
-  if (!saving && !transitioning) setFlipped(false)
+$('card-back').addEventListener('keydown', (event) => {
+  if (event.target !== $('card-back') || !['Enter', ' '].includes(event.key)) return
+  event.preventDefault()
+  if (!saving && !transitioning && queue.length) setFlipped(false)
+})
+flip.addEventListener('click', (event) => {
+  // Кнопки та розгортання прикладу мають власну дію.
+  if (event.target.closest('button, summary, a, input, select, textarea')) return
+  if (!saving && !transitioning && queue.length) setFlipped(!flipped)
 })
 
 ratings.addEventListener('click', async (event) => {

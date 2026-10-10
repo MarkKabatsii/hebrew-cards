@@ -1,0 +1,6 @@
+# Configuration for a future release; no deploy is performed by this task.
+[build]
+  command = "npm run build"
+  publish = "dist"
+[build.environment]
+  NODE_VERSION = "22.16.0"

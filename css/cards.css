@@ -51,6 +51,10 @@ button.flip-scene {
   gap: 10px;
 }
 
+.flip-scene:not(.is-quiz) .face {
+  cursor: pointer;
+}
+
 .face[aria-hidden='true'] {
   visibility: hidden;
 }

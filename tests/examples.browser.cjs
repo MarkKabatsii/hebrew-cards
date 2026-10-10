@@ -4,7 +4,7 @@ const path = require('node:path')
 const os = require('node:os')
 const { spawn } = require('node:child_process')
 const assert = require('node:assert/strict')
-const root = path.resolve(__dirname, '..')
+const root = process.env.TEST_SITE_ROOT ? path.resolve(process.env.TEST_SITE_ROOT) : path.resolve(__dirname, '..')
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'hebrew-examples-browser-'))
 const chromePath = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -110,7 +110,7 @@ async function main() {
         const beforeAX = await command('Accessibility.getFullAXTree')
         assert(!beforeAX.nodes.some(node => !node.ignored && node.name?.value?.includes('Я вивчаю іврит')))
         await evaluate(`$('scene').focus(); $('scene').click()`)
-        assert(await evaluate(`!$('card-back').inert && $('card-front').inert && document.activeElement.id==='close-card'`))
+        assert(await evaluate(`!$('card-back').inert && $('card-front').inert && document.activeElement.id==='card-back'`))
         assert.equal(await evaluate(`$('examples').hidden`), count === 0)
         if(count===2) {
           await evaluate(`$('examples').querySelector('summary').click()`)
@@ -130,8 +130,12 @@ async function main() {
           const screenshot = await command('Page.captureScreenshot', {format:'png',captureBeyondViewport:true})
           fs.writeFileSync(path.join(dir,'study-'+width+'.png'),Buffer.from(screenshot.data,'base64'))
         }
-        await evaluate(`$('close-card').click()`)
+        await evaluate(`$('meaning').click()`)
         assert(await evaluate(`!flipped && $('card-back').inert && document.activeElement.id==='scene'`))
+        await evaluate(`$('card-front').click()`)
+        assert(await evaluate(`flipped && !$('card-back').inert`))
+        await evaluate(`$('card-back').dispatchEvent(new KeyboardEvent('keydown', {key:'Enter', bubbles:true, cancelable:true}))`)
+        assert(await evaluate(`!flipped && $('card-back').inert`))
         reports.push({width,count,...dimensions})
       }
     }

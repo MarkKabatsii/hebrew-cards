@@ -50,7 +50,7 @@ CSV може містити заголовки й поля в подвійних
 Регресійні перевірки збереження прогресу, валідації та імпорту (потрібен Node.js):
 
 ```bash
-node --test tests/progress.test.cjs tests/import.test.cjs tests/examples.test.cjs
+npm test
 ```
 
 Тести використовують підставні відповіді сервера й не змінюють живу БД.
@@ -58,3 +58,25 @@ node --test tests/progress.test.cjs tests/import.test.cjs tests/examples.test.cj
 та [tests/IMPORT_UA.md](tests/IMPORT_UA.md).
 Перевірки прикладів і локальний браузерний тест описані в
 [tests/EXAMPLES_UA.md](tests/EXAMPLES_UA.md).
+
+## Навчальний маршрут (локальна реалізація v2)
+
+Окрема сторінка `learning.html`, React + TypeScript strict, до п’яти слів,
+два режими, snapshot матеріалу, письмові вправи та коротке повторення.
+Прогрес зберігається окремими транзакційними RPC через чинний Supabase client.
+Потрібна нова міграція; на Supabase її ще не застосовано.
+
+```bash
+npm ci
+npm run dev
+npm test
+npm run build
+npm run test:browser
+```
+
+Для майбутнього Netlify build задано `npm run build`, publish `dist`;
+push/deploy/production SQL не виконувалися.
+[Архітектура](docs/learning-path-architecture.md),
+[запуск і реліз](docs/learning-path-runbook.md),
+[результати A01–A18](docs/learning-path-acceptance.md),
+[матеріали для погодження відповідей](docs/learning-path-content-review.md).

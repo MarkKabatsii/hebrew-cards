@@ -284,12 +284,17 @@ textarea:focus-visible {
   .nav {
     padding: 0 16px;
     gap: 8px;
+    height: auto;
+    min-height: 52px;
   }
   .logo span:last-child {
     display: none;
   }
   .nav-links {
-    gap: 14px;
+    gap: 8px 14px;
+    flex-wrap: wrap;
+    min-width: 0;
+    padding: 8px 0;
   }
   .nav .btn-text {
     padding: 8px 0;
